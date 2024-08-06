@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -8,11 +8,60 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { gsap } from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
 
 const Intro = () => {
   const { ref } = useSectionInView("Home", 0.5);
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+
+  useEffect(() => {
+    gsap.registerPlugin(TextPlugin);
+
+    const words = ["Web Developer ", "Web Designer ", "React Developer "];
+    let mainTimeline = gsap.timeline({
+      repeat: -1,
+    });
+    words.forEach((word) => {
+      let textTimeline = gsap.timeline({
+        repeat: 1,
+        yoyo: true,
+        repeatDelay: 3,
+      });
+
+      textTimeline.to("#typewriter", {
+        text: word,
+        duration: 1,
+        onUpdate: () => {
+          cusrsorTimeline.restart();
+          cusrsorTimeline.pause();
+        },
+        onComplete: () => {
+          cusrsorTimeline.play();
+        },
+      });
+
+      mainTimeline.add(textTimeline);
+    });
+
+    // blinking cursor
+    let cusrsorTimeline = gsap.timeline({
+      repeat: -1,
+      repeatDelay: 0.8,
+    });
+
+    cusrsorTimeline
+      .to("#typewriter-cursor", {
+        opacity: 1,
+        duration: 0,
+      })
+      .to("#typewriter-cursor", {
+        opacity: 0,
+        duration: 0,
+        delay: 0.8,
+      });
+  }, []);
 
   return (
     <section
@@ -55,13 +104,22 @@ const Intro = () => {
       <motion.h1
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mb-10 mt-4 px-4 font-medium !leading-[1.5] text-2xl sm:text-4xl"
+        className=" mt-2 px-4 font-medium !leading-[1.5] text-2xl sm:text-4xl"
       >
-        <span className="font-bold">Hello, I'm Babina.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">8 years</span> of experience. I enjoy{" "}
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <span className="font-bold">Hey! I'm </span>
+      </motion.h1>
+
+      <motion.h1
+        className="text-5xl lg:text-6xl xl:text-7xl font-black font-sans pr-4 mb-10 "
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        BABINA GURUNG
+        <br />
+        <span className="text-primary" id="typewriter"></span>
+        <span id="typewriter-cursor" className="text-primary">
+          |
+        </span>
       </motion.h1>
 
       <motion.div
@@ -83,7 +141,7 @@ const Intro = () => {
         </Link>
         <a
           href="/cv.pdf"
-          className="group bg-white px-7 py-3 items-center flex gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack"
+          className="group bg-white px-7 py-3 items-center flex gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           target="_blank"
           download
         >
@@ -91,15 +149,15 @@ const Intro = () => {
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition "></HiDownload>
         </a>
         <a
-          className="bg-white p-4 text-gray-700  flex items-center gap-2 rounded-full    focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack"
+          className="bg-white p-4 text-gray-700  flex items-center gap-2 rounded-full    focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack  dark:bg-white/10 dark:text-white/60"
           href="https://linkedin.com"
           target="_blank"
         >
           <BsLinkedin></BsLinkedin>
         </a>
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem]  focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack"
-          href="https://linkedin.com"
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem]  focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://linkedin.com "
           target="_blank"
         >
           <FaGithubSquare></FaGithubSquare>
