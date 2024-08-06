@@ -19,14 +19,14 @@ const Contact = () => {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
       id="contact"
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center max-w-[53rem] scroll-mt-28 "
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <p className="text-gray-700 -mt-6">
+      <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
         <a href="mailto:babitamoo333@gmail.com" className="underline">
           abc@gmail.com
-        </a>
+        </a>{" "}
         or through this form.
       </p>
       <form
@@ -38,19 +38,19 @@ const Contact = () => {
           }
           toast.success("Email sent successfully!");
         }}
-        className="mt-10 flex flex-col"
+        className="mt-10 flex flex-col dark:text-black/80"
       >
         <input
           type="email"
           placeholder="Your email"
-          className="h-14 px-4 rounded-lg borderBlack "
+          className="h-14 px-4 rounded-lg borderBlack dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none "
           required={true}
           maxLength={500}
           name="senderEmail"
         />
         <textarea
           placeholder="Your message"
-          className="borderBlack  h-52 my-3 rounded-lg p-4"
+          className="borderBlack  h-52 my-3 rounded-lg p-4  dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           maxLength={500}
           required
           name="message"

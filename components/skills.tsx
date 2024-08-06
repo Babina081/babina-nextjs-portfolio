@@ -3,7 +3,8 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fadeInAnimationsVariants = {
   initial: {
@@ -37,9 +38,17 @@ const Skills = () => {
             // viewport={{ once: true }}
             key={index}
             custom={index}
-            className="bg-white borderBlack rounded-xl px-5 py-3"
+            className="bg-white borderBlack rounded-xl px-5 py-3 flex items-center justify-between flex-col gap-2 dark:bg-white/10 dark:text-white/80"
           >
-            {skill}
+            <Image
+              src={skill.image}
+              alt={skill.name}
+              quality={95}
+              width={50}
+              height={50}
+              className="bg-transparent"
+            ></Image>
+            {skill.name}
           </motion.li>
         ))}
       </ul>
