@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "@react-email/components": "^0.0.22",
     "@react-email/tailwind": "^0.0.19",
     "@react-three/drei": "^9.107.0",
