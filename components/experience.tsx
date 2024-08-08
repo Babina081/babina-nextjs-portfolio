@@ -11,14 +11,10 @@ import { experiencesData } from "@/lib/data";
 import { useTheme } from "@/context/theme-context";
 
 const Experience = () => {
-  const { ref } = useSectionInView("Experience", 0.5);
+  const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
   return (
-    <section
-      id="experience"
-      ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40 "
-    >
+    <section id="experience" ref={ref} className="mb-28 scroll-mt-28 sm:mb-40 ">
       <SectionHeading>Experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((experience, index) => (
@@ -29,7 +25,7 @@ const Experience = () => {
                 background:
                   theme === "light" ? "#f3f4f6" : "rgba(255,255,255,0.05)",
                 boxShadow: "none",
-                border: "1px solid rgba(0,0,0,0.05",
+                border: "1px solid rgba(0,0,0,0.05)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
@@ -37,7 +33,7 @@ const Experience = () => {
                 borderRight:
                   theme === "light"
                     ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255,255,255,0.05)",
+                    : "0.4rem solid rgba(255,255,255,0.5)",
               }}
               date={experience.date}
               icon={experience.icon}
