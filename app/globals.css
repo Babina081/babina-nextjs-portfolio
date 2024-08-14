@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Poppins";
+}
+
 html {
   --line-color: #e5e7eb;
 }
@@ -20,17 +26,18 @@ html.dark {
   @apply border border-black/10;
 }
 
-
 .container-about {
   width: 100%;
   height: 100vh;
   display: grid;
   place-items: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .c1 {
   width: 100%;
-  overflow: hidden;
 }
 
 .c1 h1 {
@@ -39,4 +46,68 @@ html.dark {
   color: black;
   font-weight: bold;
   text-wrap: nowrap;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.container {
+  height: 200vh; /* Makes the page scrollable */
+  position: relative;
+}
+.pin-me {
+  position: relative; /* This is important for pinning */
+  background: lightcoral;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.content {
+  height: 150vh; /* Additional content to ensure scrolling */
+  background: lightblue;
+  padding: 20px;
+}
+
+/* components/HorizontalScrollText.module.css */
+.scrollContainer {
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+}
+
+.scrollContent {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* components/RevealText.module.css */
+.app {
+  overflow: hidden;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.reveal {
+  font-kerning: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.section-description {
+  @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E];
+}
+
+.card {
+  @apply p-10 border border-[#222222]/10  rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full;
+}
+
+.btn-gradient {
+  @apply bg-gradient-to-b from-black to-blue-400;
+}
+
+.btn-gradient-text {
+  @apply bg-gradient-to-t from-white to-indigo-200;
 }
