@@ -2,7 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import {
   FaHome,
-  FaReact,
+  FaLocationArrow,
   FaTasks,
   FaUser,
   FaUserGraduate,
@@ -13,6 +13,8 @@ import { LuGraduationCap } from "react-icons/lu";
 import gradeCalculator from "@/public/projects/grade-calculator-app.png";
 import foodOrder from "@/public/projects/food-order-app.png";
 import eshop from "@/public/projects/eshop-app.png";
+import { FaPhone } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 
 export const links = [
   {
@@ -54,20 +56,22 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Technical Writer",
-    location: "Kathmandu, Nepal",
-    description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2022-2023",
-  },
-  {
     title: "Front-End Developer",
     location: "Pokhara, Nepal",
     description:
       "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
     icon: React.createElement(CgWorkAlt),
     date: "2023 - 2024",
+    type: "work",
+  },
+  {
+    title: "Technical Writer",
+    location: "Kathmandu, Nepal",
+    description:
+      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2022-2023",
+    type: "work",
   },
 ] as const;
 
@@ -157,5 +161,50 @@ export const academicData = [
     degree: "School Leaving Certificate (SLC)",
     location: "Sanepa, Lalitpur",
     affiliated: "Government of Nepal",
+  },
+] as const;
+
+export const projects = [
+  {
+    title: "Matthias Leidinger",
+    description:
+      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
+    src: "rock.jpg",
+    link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
+    color: "#BBACAF",
+  },
+  {
+    title: "Clément Chapillon",
+    description:
+      "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
+    src: "tree.jpg",
+    link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
+    color: "#977F6D",
+  },
+  {
+    title: "Zissou",
+    description:
+      "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+    src: "water.jpg",
+    link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
+    color: "#C2491D",
+  },
+];
+
+export const contactDetails = [
+  {
+    name: "Email",
+    icon: React.createElement(IoMdMail),
+    detail: "babitamoo333@gmail.com",
+  },
+  {
+    name: "Location",
+    icon: React.createElement(FaLocationArrow),
+    detail: "Nayagaun-15, Pokhara",
+  },
+  {
+    name: "Phone",
+    icon: React.createElement(FaPhone),
+    detail: "+977 9812345678",
   },
 ] as const;
