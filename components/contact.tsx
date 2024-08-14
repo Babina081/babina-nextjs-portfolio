@@ -7,6 +7,7 @@ import { sendEmail } from "@/actions/sendEmail";
 import { useFormStatus } from "react-dom";
 import SubmitBtn from "./submit-btn";
 import { toast } from "react-hot-toast";
+import { contactDetails } from "@/lib/data";
 
 const Contact = () => {
   const { ref } = useSectionInView("Contact", 0.75);
@@ -21,14 +22,11 @@ const Contact = () => {
       id="contact"
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center max-w-[53rem] scroll-mt-28 "
     >
-      <SectionHeading>Contact Me</SectionHeading>
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at{" "}
-        <a href="mailto:babitamoo333@gmail.com" className="underline">
-          abc@gmail.com
-        </a>{" "}
-        or through this form.
+      <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
+        Let's Initiate our Converstion
       </p>
+      <SectionHeading>Contact Me</SectionHeading>
+
       <form
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
@@ -57,6 +55,22 @@ const Contact = () => {
         ></textarea>
         <SubmitBtn></SubmitBtn>
       </form>
+
+      <div className="flex flex-col md:flex-row gap-6  pb-6 mt-4 justify-between ">
+        {contactDetails.map(({ name, icon, detail }) => (
+          <div
+            key={name}
+            className=" px-2 py-4 shadow-sm border-2  rounded-lg "
+          >
+            <h1 className="mb-2 flex items-center justify-center gap-2 w-full font-bold">
+              <span>{icon}</span>
+              {name}
+            </h1>
+
+            <p className="text-sm">{detail}</p>
+          </div>
+        ))}
+      </div>
     </motion.section>
   );
 };
