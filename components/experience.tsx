@@ -17,7 +17,6 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      // ref={sectionRef}
       ref={ref}
       className="mb-28 scroll-mt-28 sm:mb-40 "
     >
