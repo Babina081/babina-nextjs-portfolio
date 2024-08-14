@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import gsap, { Expo } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ScrollText = () => {
@@ -36,9 +36,13 @@ const ScrollText = () => {
     });
   }, []);
   return (
-    <div className=" container-about c1 mb-28">
-      <h1 className="dark:text-white">Explore My Portfolio</h1>
-    </div>
+    <>
+      <div className=" container-about c1 mb-28">
+        <h1 className="dark:bg-gradient-to-t dark:from-white dark:to-blue-300 dark:text-transparent dark:bg-clip-text ">
+          Explore My Portfolio
+        </h1>
+      </div>
+    </>
   );
 };
 
