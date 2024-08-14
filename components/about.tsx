@@ -16,6 +16,9 @@ const About = () => {
       transition={{ delay: 0.175 }}
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
     >
+      <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
+        Get To Know
+      </p>
       <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
         After graduating with a degree in{" "}

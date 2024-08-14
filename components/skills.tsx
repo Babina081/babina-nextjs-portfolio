@@ -28,7 +28,10 @@ const Skills = () => {
       ref={ref}
       id="skills"
     >
-      <SectionHeading>Skills</SectionHeading>
+      <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
+        What Skill I Am Equipped With
+      </p>
+      <SectionHeading>My Skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
