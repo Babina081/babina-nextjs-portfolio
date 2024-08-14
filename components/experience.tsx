@@ -15,13 +15,9 @@ const Experience = () => {
   const { theme } = useTheme();
 
   return (
-    <section
-      id="experience"
-      ref={ref}
-      className="mb-28 scroll-mt-28 sm:mb-40 "
-    >
+    <section id="experience" ref={ref} className="mb-28 scroll-mt-28 sm:mb-40 ">
       <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
-        Works Recently Accomplished By Me{" "}
+        Checkout my work real world experience
       </p>
       <SectionHeading>Experience</SectionHeading>
       <VerticalTimeline lineColor="">
