@@ -54,7 +54,7 @@ const Skills = () => {
             variants={fadeInAnimationsVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
+            // viewport={{ once: true }}
             key={index}
             custom={index}
             className="bg-white borderBlack rounded-xl px-5 py-3 flex items-center justify-between flex-col gap-2 dark:bg-white/10 dark:text-white/80 "
