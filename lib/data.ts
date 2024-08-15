@@ -16,6 +16,7 @@ import inventoryManagement from "@/public/projects/inventory management.png";
 import xClone from "@/public/projects/x-clone.png";
 import eshop from "@/public/projects/eshop-app.png";
 import chatAI from "@/public/projects/chatAI.png";
+import skygyan from "@/public/projects/skygyan.jpg";
 import saas from "@/public/projects/saas-app.png";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -60,19 +61,21 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Front-End Developer",
+    title: "Front-End Developer - Intern",
+    company: "Skybase Innovation",
     location: "Pokhara, Nepal",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "During my internship as a Frontend Next.js Developer, I mastered Next.js and Tailwind CSS, translating design mockups into functional, responsive web applications. I also gained experience in API integration, testing, and Git, enhancing my ability to deliver clean, maintainable code.",
     icon: React.createElement(CgWorkAlt),
     date: "2023 - 2024",
     type: "work",
   },
   {
-    title: "Technical Writer",
+    title: "Technical Research Engineer",
+    company: "Entegra-source Pvt. Ltd.",
     location: "Kathmandu, Nepal",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Worked remotely as a Technical Research Engineer, where I developed skills in technical writing, research, and content formatting, focusing on topics related to computer electronics and other fields,  while collaborating with teams to enhance my writing and thinking abilities.",
     icon: React.createElement(CgWorkAlt),
     date: "2022-2023",
     type: "work",
@@ -85,9 +88,9 @@ export const projectsData = [
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
     tags: ["React", "Next.js", "Javascript", "Tailwind", "Redux"],
-    imageUrl: eshop,
-    gitpage: "https://github.com/Babina081/cryptocurrency-api-react-project",
-    demo: "https://crypto-app-101.netlify.app/",
+    imageUrl: skygyan,
+    gitpage: "https://github.com/skybaseinnovations/skygyan-next",
+    demo: "http://localhost:3000/home/explore",
   },
   {
     title: "College Grade Calculator",
