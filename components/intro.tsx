@@ -12,6 +12,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 import img1 from "@/public/intro1.png";
 import img2 from "@/public/intro2.png";
 import img3 from "@/public/intro3.png";
+import starImage from "@/public/star.png";
 
 const Intro = () => {
   const introRef = useRef(null);
@@ -85,7 +86,7 @@ const Intro = () => {
       <section
         ref={introRef}
         id="home"
-        className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] "
+        className="mt-14 pb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]  "
       >
         <div className="flex items-center justify-center">
           <div className="relative">
@@ -99,7 +100,7 @@ const Intro = () => {
                 alt="cylinder Image"
                 width={300}
                 height={300}
-                className="hidden md:block -top-3 -left-32 md:absolute "
+                className="hidden md:block -top-3 -left-32 md:absolute drop-shadow-md "
                 // style={{ translateY: translateY, rotate: -30 }}
                 style={{ rotate: -30, scale: 1.6 }}
                 animate={{ translateY: [-20, 20] }}
@@ -115,7 +116,7 @@ const Intro = () => {
                 alt="noodle Image"
                 width={220}
                 height={220}
-                className="hidden lg:block top-[200px] left-[400px] md:absolute rotate-[30deg]"
+                className="hidden lg:block top-[200px] left-[380px] md:absolute rotate-[30deg]drop-shadow-md dark:invert"
                 // style={{ rotate: 20, translateY: translateY }}
                 style={{ rotate: 20 }}
                 animate={{ translateY: [-20, 20] }}
@@ -131,7 +132,7 @@ const Intro = () => {
                 alt="noodle Image"
                 width={220}
                 height={220}
-                className="hidden lg:block top-[150px] right-[400px] md:absolute rotate-[30deg]"
+                className="hidden lg:block top-[150px] right-[400px] md:absolute rotate-[30deg]  drop-shadow-md"
                 // style={{ translateY: translateY, rotate: -30 }}
                 style={{ rotate: -30 }}
                 animate={{ translateY: [-20, 20] }}
@@ -139,6 +140,19 @@ const Intro = () => {
                   repeat: Infinity,
                   repeatType: "mirror",
                   duration: 3,
+                  ease: "easeInOut",
+                }}
+              ></motion.img>
+              <motion.img
+                src={starImage.src}
+                alt="star image"
+                className="absolute left-[90px] top-[50px] sm:-top-[20px] sm:left-[150px]  -z-10"
+                style={{ translateY: translateY, rotate: -80 }}
+                animate={{ rotate: 360, scale: [1, 2, 1], opacity: 1 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 10,
+                  repeatType: "loop",
                   ease: "easeInOut",
                 }}
               ></motion.img>
