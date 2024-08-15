@@ -23,7 +23,7 @@ const CTA = () => {
       <div className="flex gap-2 items-center justify-center">
         <motion.a
           className="bg-white  p-4 text-gray-700  flex items-center gap-2 rounded-full    focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack  dark:bg-white/10 dark:text-white/60 shadow-md"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/babina-g-8303631b8/"
           target="_blank"
           animate={{ backgroundPositionX: "100%" }}
           transition={{
@@ -38,7 +38,7 @@ const CTA = () => {
 
         <motion.a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem]  focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com "
+          href="https://github.com/Babina081"
           target="_blank"
         >
           <FaGithubSquare></FaGithubSquare>
