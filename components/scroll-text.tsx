@@ -37,7 +37,7 @@ const ScrollText = () => {
   }, []);
   return (
     <>
-      <div className=" container-about c1 mb-28">
+      <div className=" container-about c1 mb-28 overflow-hidden w-screen">
         <h1 className="dark:bg-gradient-to-t dark:from-white dark:to-blue-300 dark:text-transparent dark:bg-clip-text ">
           Explore My Portfolio
         </h1>
