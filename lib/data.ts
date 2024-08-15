@@ -76,15 +76,15 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
-  // {
-  //   title: "SkyGyan",
-  //   description:
-  //     "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-  //   tags: ["React", "Next.js", "Javascript", "Tailwind", "Redux"],
-  //   imageUrl: eshop,
-  //   gitpage: "https://github.com/Babina081/cryptocurrency-api-react-project",
-  //   demo: "https://crypto-app-101.netlify.app/",
-  // },
+  {
+    title: "SkyGyan",
+    description:
+      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+    tags: ["React", "Next.js", "Javascript", "Tailwind", "Redux"],
+    imageUrl: eshop,
+    gitpage: "https://github.com/Babina081/cryptocurrency-api-react-project",
+    demo: "https://crypto-app-101.netlify.app/",
+  },
   {
     title: "College Grade Calculator",
     description:
@@ -98,8 +98,8 @@ export const projectsData = [
       "daisyui",
     ],
     imageUrl: gradeCalculator,
-    gitpage: "https://github.com/Babina081/cryptocurrency-api-react-project",
-    demo: "https://crypto-app-101.netlify.app/",
+    gitpage: "https://github.com/Babina081/garde-calculator",
+    demo: "https://garde-calculator.vercel.app/",
   },
   {
     title: "Food Order App",
@@ -107,7 +107,7 @@ export const projectsData = [
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["TypeScript", "Next.js", "Tailwind", "Zod", "Nodejs", "Mongodb"],
     imageUrl: foodOrder,
-    gitpage: "https://github.com/Babina081/cryptocurrency-api-react-project",
+    gitpage: "https://github.com/Babina081/food-order-nextjs",
     demo: "https://crypto-app-101.netlify.app/",
   },
   {
@@ -116,8 +116,36 @@ export const projectsData = [
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
     imageUrl: eshop,
-    gitpage: "https://github.com/Babina081/cryptocurrency-api-react-project",
-    demo: "https://crypto-app-101.netlify.app/",
+    gitpage: "https://github.com/Babina081/fullstack-authentication-nextjs",
+    demo: "https://fullstack-authentication-nextjs.vercel.app/",
+  },
+  {
+    title: "Inventory Management App",
+    description:
+      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+    tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
+    imageUrl: eshop,
+    gitpage:
+      "https://github.com/Babina081/inventory-nextjs-postgres-prisma-project",
+    demo: "#",
+  },
+  {
+    title: "X-clone Authentication Project",
+    description:
+      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+    tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
+    imageUrl: eshop,
+    gitpage: "https://github.com/Babina081/x-next",
+    demo: "https://x-next-brown.vercel.app/",
+  },
+  {
+    title: "AI chat with files App",
+    description:
+      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+    tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
+    imageUrl: eshop,
+    gitpage: "https://github.com/Babina081/chat-ai-nextjs-project",
+    demo: "https://chat-ai-nextjs-project.vercel.app/",
   },
 ] as const;
 
