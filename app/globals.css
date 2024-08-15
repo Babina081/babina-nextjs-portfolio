@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --paper-shadow: #c9bf8d;
+  --circle-color: black;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +25,7 @@ html {
 
 html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
+  --circle-color: black;
 }
 
 .borderBlack {
@@ -110,4 +116,165 @@ html.dark {
 
 .btn-gradient-text {
   @apply bg-gradient-to-t from-white to-indigo-200;
+}
+
+.paper {
+  --paper-dark: #e5c93d;
+  --paper-color: #ffed87;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: 325px;
+  min-height: 100px;
+  background: linear-gradient(
+    45deg,
+    var(--paper-dark),
+    50%,
+    var(--paper-color)
+  );
+  box-shadow: 3px 3px 2px var(--paper-shadow);
+  /* transform: rotate(15deg); */
+  transform-origin: top left;
+}
+
+.paper p {
+  /* margin: auto; */
+}
+
+.pin {
+  --pin-color: #d02627;
+  --pin-dark: #9e0608;
+  --pin-light: #fc7e7d;
+
+  position: absolute;
+  left: 20px;
+  width: 60px;
+  height: 50px;
+}
+
+.shadow {
+  position: absolute;
+  top: 18px;
+  left: -8px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: radial-gradient(var(--paper-shadow), 20%, rgba(201, 191, 141, 0));
+}
+
+.metal {
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background: linear-gradient(to right, #808080, 40%, #eae8e8, 50%, #808080);
+  border-radius: 0 0 30% 30%;
+  transform: rotate(50deg);
+  transform-origin: bottom left;
+  top: 15px;
+  border-bottom: 1px solid #808080;
+}
+
+.bottom-circle {
+  position: absolute;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--pin-color);
+  background: radial-gradient(
+    circle at bottom right,
+    var(--pin-light),
+    25%,
+    var(--pin-dark),
+    90%,
+    var(--pin-color)
+  );
+}
+
+/* Barrel */
+.bottom-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 20px;
+  height: 30px;
+  transform: rotate(55deg);
+  transform-origin: 100% 100%;
+  border-radius: 0 0 40% 40%;
+  background: linear-gradient(
+    to right,
+    var(--pin-dark),
+    30%,
+    var(--pin-color),
+    90%,
+    var(--pin-light)
+  );
+}
+
+/* Top circle */
+.bottom-circle::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at right,
+    var(--pin-light),
+    30%,
+    var(--pin-color),
+    var(--pin-dark) 80%
+  );
+}
+
+#star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through */
+  z-index: 1000; /* Ensures the stars are on top of other elements */
+  overflow: hidden; /* Prevents stars from overflowing outside the viewport */
+}
+
+.star {
+  position: absolute;
+  width: 10px; /* Adjust size */
+  height: 10px; /* Adjust size */
+  background-color: yellow;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  opacity: 0.8;
+  transform: translate(-50%, -50%) scale(1); /* Center the star and set initial scale */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.circle {
+  --circle-size: 40px;
+  position: fixed;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  border: 1px solid var(--circle-color);
+  border-radius: 100%;
+  top: calc(var(--circle-size) / 2 * -1);
+  left: calc(var(--circle-size) / 2 * -1);
+  pointer-events: none;
+  z-index: 1000;
 }
