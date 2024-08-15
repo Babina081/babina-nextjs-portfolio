@@ -51,7 +51,7 @@ const Academic = () => {
                       <h1 className="text-sm font-semibold sm:font-bold">
                         {college}
                       </h1>
-                      <h3 className="text-sm font-medium sm:font-semibold italic">
+                      <h3 className="text-xs font-medium sm:font-semibold italic">
                         {affiliated}
                       </h3>
                       <p className="text-sm font-bold underline text-left">
