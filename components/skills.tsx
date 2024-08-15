@@ -22,7 +22,7 @@ const fadeInAnimationsVariants = {
 
 const Skills = () => {
   const skillRef = useRef(null);
-  const { ref: sectionInViewRef } = useSectionInView("Home", 0.5);
+  const { ref: sectionInViewRef } = useSectionInView("Skills", 0.75);
 
   // Combine the refs using useEffect
   useEffect(() => {
@@ -38,17 +38,19 @@ const Skills = () => {
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
-    <motion.section
+    <section
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
       ref={skillRef}
       id="skills"
-      style={{ translateY: translateY }}
     >
       <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
         What Skill I Am Equipped With
       </p>
       <SectionHeading>My Skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center space-x-4 space-y-4 mt-12 text-lg text-gray-800">
+      <motion.ul
+        style={{ translateY: translateY }}
+        className="flex flex-wrap justify-center space-x-4 space-y-4 mt-12 text-lg text-gray-800"
+      >
         {skillsData.map((skill, index) => (
           <motion.li
             variants={fadeInAnimationsVariants}
@@ -71,8 +73,8 @@ const Skills = () => {
             {skill.name}
           </motion.li>
         ))}
-      </ul>
-    </motion.section>
+      </motion.ul>
+    </section>
   );
 };
 
