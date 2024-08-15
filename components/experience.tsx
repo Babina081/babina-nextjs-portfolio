@@ -19,7 +19,7 @@ const Experience = () => {
       <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
         Checkout my work real world experience
       </p>
-      <SectionHeading>Experience</SectionHeading>
+      <SectionHeading>My Work Experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((experience, index) => (
           <VerticalTimelineElement
