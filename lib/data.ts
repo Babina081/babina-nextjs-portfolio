@@ -12,7 +12,11 @@ import { PiMedalFill } from "react-icons/pi";
 import { LuGraduationCap } from "react-icons/lu";
 import gradeCalculator from "@/public/projects/grade-calculator-app.png";
 import foodOrder from "@/public/projects/food-order-app.png";
+import inventoryManagement from "@/public/projects/inventory management.png";
+import xClone from "@/public/projects/x-clone.png";
 import eshop from "@/public/projects/eshop-app.png";
+import chatAI from "@/public/projects/chatAI.png";
+import saas from "@/public/projects/saas-app.png";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 
@@ -120,11 +124,20 @@ export const projectsData = [
     demo: "https://fullstack-authentication-nextjs.vercel.app/",
   },
   {
+    title: "SAAS Project",
+    description:
+      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+    tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
+    imageUrl: saas,
+    gitpage: "https://github.com/Babina081/chat-ai-nextjs-project",
+    demo: "https://chat-ai-nextjs-project.vercel.app/",
+  },
+  {
     title: "Inventory Management App",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
-    imageUrl: eshop,
+    imageUrl: inventoryManagement,
     gitpage:
       "https://github.com/Babina081/inventory-nextjs-postgres-prisma-project",
     demo: "#",
@@ -134,16 +147,17 @@ export const projectsData = [
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
-    imageUrl: eshop,
+    imageUrl: xClone,
     gitpage: "https://github.com/Babina081/x-next",
     demo: "https://x-next-brown.vercel.app/",
   },
+
   {
     title: "AI chat with files App",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
-    imageUrl: eshop,
+    imageUrl: chatAI,
     gitpage: "https://github.com/Babina081/chat-ai-nextjs-project",
     demo: "https://chat-ai-nextjs-project.vercel.app/",
   },
@@ -170,7 +184,7 @@ export const skillsData = [
 
 export const academicData = [
   {
-    date: "2017 - 2022",
+    date: "2017-2022",
     college: "Pokhara Engineering College",
     degree: "Bachelor in Computer Engineering",
     location: "Phire,Pokhara",
