@@ -96,14 +96,7 @@ export const projectsData = [
     title: "College Grade Calculator",
     description:
       "I developed a College Grade Calculator app as well during my internship. This app calculates individual student grades and estimates the maximum and minimum grades achievable in remaining courses. It's user-friendly and fun to use.",
-    tags: [
-      "React",
-      "JavaScript",
-      "Next.js",
-      "Tailwind",
-      "framer-motion",
-      "daisyui",
-    ],
+    tags: ["JavaScript", "Next.js", "Tailwind", "daisyui", "framer-motion"],
     imageUrl: gradeCalculator,
     gitpage: "https://github.com/Babina081/garde-calculator",
     demo: "https://garde-calculator.vercel.app/",
@@ -140,15 +133,14 @@ export const projectsData = [
     description:
       "Developed a robust full-stack inventory management system using Next.js, PostgreSQL, and Prisma, enabling efficient tracking and management of inventory data.",
     tags: [
-      "TypeScript",
       "Next.js",
       "Tailwind",
       "Node",
+      "Redux",
       "Express",
       "Postgres",
       "Prisma",
       "Recharts",
-      "Redux",
     ],
     imageUrl: inventoryManagement,
     gitpage:
