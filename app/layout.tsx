@@ -8,6 +8,8 @@ import { Toaster } from "react-hot-toast";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import CTA from "@/components/cta";
+import StarMouse from "@/components/star-mouse";
+import CircleElasticMouse from "@/components/circle-elastic-mouse";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -30,6 +32,7 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header></Header>
+            <StarMouse></StarMouse> <CircleElasticMouse></CircleElasticMouse>
             {children}
             <Footer></Footer>
             <ThemeSwitch></ThemeSwitch>
