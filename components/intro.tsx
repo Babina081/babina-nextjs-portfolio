@@ -52,11 +52,11 @@ const Intro = () => {
         text: word,
         duration: 1,
         onUpdate: () => {
-          cusrsorTimeline.restart();
-          cusrsorTimeline.pause();
+          cursorTimeline.restart();
+          cursorTimeline.pause();
         },
         onComplete: () => {
-          cusrsorTimeline.play();
+          cursorTimeline.play();
         },
       });
 
@@ -64,12 +64,12 @@ const Intro = () => {
     });
 
     // blinking cursor
-    let cusrsorTimeline = gsap.timeline({
+    let cursorTimeline = gsap.timeline({
       repeat: -1,
       repeatDelay: 0.8,
     });
 
-    cusrsorTimeline
+    cursorTimeline
       .to("#typewriter-cursor", {
         opacity: 1,
         duration: 0,
@@ -101,7 +101,6 @@ const Intro = () => {
                 width={300}
                 height={300}
                 className="hidden md:block -top-3 -left-32 md:absolute drop-shadow-md "
-                // style={{ translateY: translateY, rotate: -30 }}
                 style={{ rotate: -30, scale: 1.6 }}
                 animate={{ translateY: [-20, 20] }}
                 transition={{
