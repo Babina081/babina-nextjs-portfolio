@@ -86,8 +86,8 @@ export const projectsData = [
   {
     title: "SkyGyan",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "Javascript", "Tailwind", "Redux"],
+      "I developed the SkyGyan app, a learning management system, solely during my internship. I implemented the provided design and integrated it with the backend API, which significantly enhanced my communication and problem-solving skills.",
+    tags: ["React", "Next.js", "Javascript", "Tailwind", "Redux Toolkit"],
     imageUrl: skygyan,
     gitpage: "https://github.com/skybaseinnovations/skygyan-next",
     demo: "http://localhost:3000/home/explore",
@@ -95,7 +95,7 @@ export const projectsData = [
   {
     title: "College Grade Calculator",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "I developed a College Grade Calculator app as well during my internship. This app calculates individual student grades and estimates the maximum and minimum grades achievable in remaining courses. It's user-friendly and fun to use.",
     tags: [
       "React",
       "JavaScript",
@@ -111,45 +111,55 @@ export const projectsData = [
   {
     title: "Food Order App",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "I created a full-stack food app, handling both frontend and backend development. The app allows users to browse, order, and manage food items, providing a seamless and interactive experience.",
     tags: ["TypeScript", "Next.js", "Tailwind", "Zod", "Nodejs", "Mongodb"],
     imageUrl: foodOrder,
     gitpage: "https://github.com/Babina081/food-order-nextjs",
-    demo: "https://crypto-app-101.netlify.app/",
+    demo: "https://food-order-nextjs-chi.vercel.app/",
   },
   {
     title: "E-shop",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "I developed an eCommerce app, managing both the frontend and backend to provide a smooth shopping experience for users, including features like product browsing, purchasing, and order management.",
     tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
     imageUrl: eshop,
     gitpage: "https://github.com/Babina081/fullstack-authentication-nextjs",
     demo: "https://fullstack-authentication-nextjs.vercel.app/",
   },
   {
-    title: "SAAS Project",
+    title: "SaaS Project",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
+      "I developed a frontend SaaS project, focusing on creating a beautiful UI and incorporating engaging animations to enhance the user experience.",
+    tags: ["TypeScript", "Next.js", "Tailwind", "Framer Motion"],
     imageUrl: saas,
-    gitpage: "https://github.com/Babina081/chat-ai-nextjs-project",
-    demo: "https://chat-ai-nextjs-project.vercel.app/",
+    gitpage: "https://github.com/Babina081/saas-landing-page-nextjs",
+    demo: "https://saas-landing-page-nextjs.vercel.app/",
   },
   {
     title: "Inventory Management App",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
+      "Developed a robust full-stack inventory management system using Next.js, PostgreSQL, and Prisma, enabling efficient tracking and management of inventory data. Leveraged modern technologies to ensure scalability, reliability, and seamless user experience.",
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind",
+      "Nodejs",
+      "Express.js",
+      "PostgresSQL",
+      "Prisma",
+      "Recharts",
+      "Redux Toolkit",
+    ],
     imageUrl: inventoryManagement,
     gitpage:
       "https://github.com/Babina081/inventory-nextjs-postgres-prisma-project",
-    demo: "#",
+    demo: "https://inventory-nextjs-postgres-project.vercel.app/",
   },
   {
     title: "X-clone Authentication Project",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
+      "I created an X-clone project with a strong emphasis on authentication and post features, ensuring secure user access and smooth content management. It focus on delivering a user-friendly experience with reliable authentication flows.",
+    tags: ["Javascript", "Next.js", "Tailwind", "Next-Auth", "Firebase"],
     imageUrl: xClone,
     gitpage: "https://github.com/Babina081/x-next",
     demo: "https://x-next-brown.vercel.app/",
@@ -158,8 +168,8 @@ export const projectsData = [
   {
     title: "AI chat with files App",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["TypeScript", "Next.js", "Tailwind", "Nodemailer", "MongoDB"],
+      "I developed an AI chat application that processes and interacts based on uploaded files, providing context-aware responses tailored to the content of the files. Integrated advanced AI capabilities to enhance user interaction and functionality.",
+    tags: ["TypeScript", "Next.js", "Tailwind", "Firebase", "Clerk",''],
     imageUrl: chatAI,
     gitpage: "https://github.com/Babina081/chat-ai-nextjs-project",
     demo: "https://chat-ai-nextjs-project.vercel.app/",
