@@ -138,17 +138,17 @@ export const projectsData = [
   {
     title: "Inventory Management App",
     description:
-      "Developed a robust full-stack inventory management system using Next.js, PostgreSQL, and Prisma, enabling efficient tracking and management of inventory data. Leveraged modern technologies to ensure scalability, reliability, and seamless user experience.",
+      "Developed a robust full-stack inventory management system using Next.js, PostgreSQL, and Prisma, enabling efficient tracking and management of inventory data.",
     tags: [
       "TypeScript",
       "Next.js",
       "Tailwind",
-      "Nodejs",
-      "Express.js",
-      "PostgresSQL",
+      "Node",
+      "Express",
+      "Postgres",
       "Prisma",
       "Recharts",
-      "Redux Toolkit",
+      "Redux",
     ],
     imageUrl: inventoryManagement,
     gitpage:
@@ -169,7 +169,7 @@ export const projectsData = [
     title: "AI chat with files App",
     description:
       "I developed an AI chat application that processes and interacts based on uploaded files, providing context-aware responses tailored to the content of the files. Integrated advanced AI capabilities to enhance user interaction and functionality.",
-    tags: ["TypeScript", "Next.js", "Tailwind", "Firebase", "Clerk",''],
+    tags: ["TypeScript", "Next.js", "Tailwind", "Firebase", "Clerk"],
     imageUrl: chatAI,
     gitpage: "https://github.com/Babina081/chat-ai-nextjs-project",
     demo: "https://chat-ai-nextjs-project.vercel.app/",
