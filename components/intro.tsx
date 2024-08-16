@@ -13,6 +13,7 @@ import img1 from "@/public/intro1.png";
 import img2 from "@/public/intro2.png";
 import img3 from "@/public/intro3.png";
 import starImage from "@/public/star.png";
+import meImage from "@/public/me.jpg";
 
 const Intro = () => {
   const introRef = useRef(null);
@@ -156,11 +157,11 @@ const Intro = () => {
                 }}
               ></motion.img>
               <Image
-                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src={meImage}
                 alt=""
                 width={192}
                 height={192}
-                className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
+                className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl "
                 quality={95}
                 priority={true}
               ></Image>
