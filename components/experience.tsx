@@ -48,12 +48,17 @@ const Experience = () => {
                 : { background: "#f9c74f", fontSize: "1.5rem", color: "white" }
             }
           >
-            <h2 className=" font-medium pt-[0.25em]">{experience.title}</h2>
+            <h2 className="bg-gradient-to-b from-black to-blue-400 text-transparent bg-clip-text dark:text-[#06D6A0]  font-medium pt-[0.25em]">
+              {experience.title}
+            </h2>
             <h3 className="text-black dark:text-white underline text-sm">
               {experience.company}
             </h3>
             <h5 className="">{experience.location}</h5>
-            <p id="description " className="tracking-tighter text-justify text-sm font-normal">
+            <p
+              id="description "
+              className="tracking-tighter text-justify text-sm font-normal"
+            >
               {experience.description}
             </p>
           </VerticalTimelineElement>
