@@ -7,8 +7,6 @@ const Footer = () => {
   const magnetoRef = useRef<HTMLButtonElement>(null);
   const magnetoTextRef = useRef<HTMLSpanElement>(null);
 
-  const dbgr = document.querySelector("#debugger");
-
   const activateMagneto = (event: MouseEvent) => {
     const magneto = magnetoRef.current;
     const magnetoText = magnetoTextRef.current;
@@ -87,7 +85,6 @@ const Footer = () => {
           <FaHandPointUp className="h-8 w-8" /> Back To Top
         </span>
       </button>
-      <div id="debugger"></div>
 
       <small className="mb-2  text-xs flex items-center justify-center">
         &copy; 2024 Babina Gurung Personal Portfolio 💼. All rights reserved.
