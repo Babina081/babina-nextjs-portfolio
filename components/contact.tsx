@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import { useFormStatus } from "react-dom";
@@ -10,15 +10,33 @@ import { toast } from "react-hot-toast";
 import { contactDetails } from "@/lib/data";
 
 const Contact = () => {
-  const { ref } = useSectionInView("Contact", 0.75);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const { ref: sectionInViewRef } = useSectionInView("Projects", 0.75);
+
+  useEffect(() => {
+    if (sectionInViewRef) {
+      sectionInViewRef(contactRef.current);
+    }
+  }, [sectionInViewRef]);
+
+  const { scrollYProgress } = useScroll({
+    target: contactRef,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
 
   return (
     <motion.section
-      ref={ref}
+      ref={contactRef}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
       id="contact"
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center max-w-[53rem] scroll-mt-28 "
     >
