@@ -266,6 +266,15 @@ html.dark {
   z-index: 1000;
 }
 
+@media (max-width: 400px) {
+  .star {
+    display: none;
+  }
+  .circle {
+    display: none;
+  }
+}
+
 .circle {
   --circle-size: 40px;
   position: fixed;
@@ -277,4 +286,40 @@ html.dark {
   left: calc(var(--circle-size) / 2 * -1);
   pointer-events: none;
   z-index: 1000;
+}
+
+/* loader css */
+.spinner {
+  position: relative;
+}
+
+.spinner::before,
+.spinner::after {
+  border: 6.7px solid #474bff;
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  display: block;
+}
+
+.spinner::before {
+  width: 33.6px;
+  height: 33.6px;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  animation: spinner-1o3y8q 0.75s infinite linear reverse;
+}
+
+.spinner::after {
+  animation: spinner-1o3y8q 0.5s infinite linear;
+  height: 56px;
+  width: 56px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+@keyframes spinner-1o3y8q {
+  to {
+    transform: rotate(360deg);
+  }
 }
