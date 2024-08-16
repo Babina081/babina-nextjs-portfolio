@@ -7,7 +7,7 @@ import pyramidImage from "@/public/pyramid.png";
 import tubeImage from "@/public/tube.png";
 const About = () => {
   const aboutRef = useRef(null);
-  const { ref: sectionInViewRef } = useSectionInView("About", 0.75);
+  const { ref: sectionInViewRef } = useSectionInView("About", 0.25);
   // Combine the refs using useEffect
   useEffect(() => {
     if (sectionInViewRef) {
