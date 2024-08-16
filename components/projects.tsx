@@ -15,37 +15,32 @@ const Projects = () => {
       <SectionHeading>My Projects</SectionHeading>
 
       {projectsData.map((project, index) => {
-        const projectRef = useRef(null);
-        // const { ref: sectionInViewRef } = useSectionInView("Projects", 0.25);
-        const { ref: sectionInViewRef } = useSectionInView(
-          "Projects",
-          0.25,
-          index
-        );
-        useEffect(() => {
-          if (sectionInViewRef) {
-            sectionInViewRef(projectRef.current);
-          }
-        }, [sectionInViewRef]);
-        const { scrollYProgress } = useScroll({
-          target: projectRef,
-          offset: ["0 1", "1.33 1"],
-        });
-        const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-        const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+        // const projectRef = useRef(null);
+        // // const { ref: sectionInViewRef } = useSectionInView("Projects", 0.25);
+        // const { ref: sectionInViewRef } = useSectionInView(
+        //   "Projects",
+        //   0.25,
+        //   index
+        // );
+        // useEffect(() => {
+        //   if (sectionInViewRef) {
+        //     sectionInViewRef(projectRef.current);
+        //   }
+        // }, [sectionInViewRef]);
+        // const { scrollYProgress } = useScroll({
+        //   target: projectRef,
+        //   offset: ["0 1", "1.33 1"],
+        // });
+        // const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+        // const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
         return (
-          <motion.div
-            ref={projectRef}
-            style={{
-              scale: scaleProgress,
-              opacity: opacityProgress,
-            }}
+          <div
             className="group mb-3 sm:mb-8 last:mb-0 flex gap-2 sm:flex-row "
             key={index}
           >
             <Project {...project} />
-          </motion.div>
+          </div>
         );
       })}
     </section>
