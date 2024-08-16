@@ -5,6 +5,7 @@
 :root {
   --paper-shadow: #c9bf8d;
   --circle-color: black;
+  --star-color: #001e80;
 }
 
 * {
@@ -26,6 +27,7 @@ html {
 html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
   --circle-color: white;
+  --star-color: yellow;
 }
 
 .borderBlack {
@@ -246,7 +248,7 @@ html.dark {
   position: absolute;
   width: 10px; /* Adjust size */
   height: 10px; /* Adjust size */
-  background-color: yellow;
+  background-color: var(--star-color);
   clip-path: polygon(
     50% 0%,
     61% 35%,
