@@ -326,6 +326,7 @@ html.dark {
   }
 }
 
+/* animation for button theme switch */
 @keyframes glow {
   0% {
     box-shadow: 0 0 5px 2px rgba(255, 215, 0, 0.5),
@@ -362,4 +363,30 @@ html.dark {
 
 .dark .animate-glow {
   animation: glow 2.5s infinite alternate;
+}
+
+/* back to top button */
+#debugger {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: gray;
+  color: white;
+  padding: 2rem;
+  width: 20rem;
+}
+
+.magneto {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: none;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
