@@ -8,21 +8,16 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const Projects = () => {
   const projectRef = useRef(null);
-  const { ref: sectionInViewRef } = useSectionInView("Projects", 0.5);
+  const { ref: sectionInViewRef } = useSectionInView("Projects");
 
   useEffect(() => {
     if (sectionInViewRef) {
       sectionInViewRef(projectRef.current);
     }
   }, [sectionInViewRef]);
-  const { scrollYProgress } = useScroll({
-    target: projectRef,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
-    <section id="projects" className="scroll-mt-28 mb-28 ">
+    <section ref={projectRef} id="projects" className="scroll-mt-28 mb-28 ">
       <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
         Works Recently Accomplished By Me
       </p>
@@ -30,17 +25,9 @@ const Projects = () => {
 
       {projectsData.map((project, index) => {
         return (
-          <motion.div
-            ref={projectRef}
-            style={{
-              scale: scaleProgress,
-              opacity: opacityProgress,
-            }}
-            className="group mb-3 sm:mb-8 last:mb-0 flex gap-2 sm:flex-row "
-            key={index}
-          >
+          <React.Fragment key={index}>
             <Project {...project} />
-          </motion.div>
+          </React.Fragment>
         );
       })}
     </section>

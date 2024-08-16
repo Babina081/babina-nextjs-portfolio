@@ -28,7 +28,13 @@ function Project({
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <
+    <motion.div
+      ref={projectRef}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      className="group mb-3 sm:mb-8 last:mb-0 flex gap-2 sm:flex-row "
     >
       <section className="order-1 sm:group-even:order-2 bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem]  sm:group-even:pl-8 hover:bg-gray-200 transition rounded-lg dark:bg-white/10 dark:hover:bg-white/20 dark:text-white  ">
         <div className="pt-4 pb-7 px-5  sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
@@ -64,7 +70,7 @@ function Project({
           <FaRegCirclePlay className="h-7 w-7 border rounded-full drop-shadow-md  bg-gradient-to-br dark:from-white dark:to-blue-500  cursor-pointer hover:scale-125 transition-all duration-100" />
         </a>
       </div>
-    </>
+    </motion.div>
   );
 }
 export default Project;
