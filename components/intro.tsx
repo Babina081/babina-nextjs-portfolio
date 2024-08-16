@@ -38,7 +38,7 @@ const Intro = () => {
   useEffect(() => {
     gsap.registerPlugin(TextPlugin);
 
-    const words = ["Web Developer ", "Web Designer ", "React Developer "];
+    const words = ["Web Developer ", "React Developer ", "Nextjs Developer"];
     let mainTimeline = gsap.timeline({
       repeat: -1,
     });
