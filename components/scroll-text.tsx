@@ -41,9 +41,6 @@ const ScrollText = () => {
         <h1 className="dark:bg-gradient-to-t dark:from-white dark:to-blue-300 dark:text-transparent dark:bg-clip-text ">
           Explore My Portfolio
         </h1>
-        <h1 className="dark:bg-gradient-to-t dark:from-white dark:to-blue-300 dark:text-transparent dark:bg-clip-text ">
-          Explore My Portfolio
-        </h1>
       </div>
     </>
   );
