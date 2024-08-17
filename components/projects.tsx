@@ -17,7 +17,7 @@ const Projects = () => {
   }, [sectionInViewRef]);
 
   return (
-    <section ref={projectRef} id="projects" className="scroll-mt-28 mb-28 ">
+    <section ref={projectRef} className="scroll-mt-28 mb-28 ">
       <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
         Works Recently Accomplished By Me
       </p>

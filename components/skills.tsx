@@ -41,7 +41,6 @@ const Skills = () => {
     <section
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
       ref={skillRef}
-      id="skills"
     >
       <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
         What Skill I Am Equipped With

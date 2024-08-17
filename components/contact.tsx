@@ -10,8 +10,8 @@ import { toast } from "react-hot-toast";
 import { contactDetails } from "@/lib/data";
 
 const Contact = () => {
-  const contactRef = useRef<HTMLDivElement>(null);
-  const { ref: sectionInViewRef } = useSectionInView("Projects", 0.75);
+  const contactRef = useRef(null);
+  const { ref: sectionInViewRef } = useSectionInView("Contact", 0.75);
 
   useEffect(() => {
     if (sectionInViewRef) {
@@ -29,15 +29,14 @@ const Contact = () => {
   return (
     <motion.section
       ref={contactRef}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
+      // initial={{ opacity: 0 }}
+      // whileInView={{ opacity: 1 }}
+      // transition={{ duration: 1 }}
+      // viewport={{ once: true }}
       style={{
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      id="contact"
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center max-w-[53rem] scroll-mt-28 "
     >
       <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
