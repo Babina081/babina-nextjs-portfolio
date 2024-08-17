@@ -135,7 +135,7 @@ html.dark {
     50%,
     var(--paper-color)
   );
-  box-shadow: 3px 3px 2px var(--paper-shadow);
+  box-shadow: 10px 10px 2px var(--paper-shadow);
   /* transform: rotate(15deg); */
   transform-origin: top left;
 }
@@ -388,5 +388,4 @@ html.dark {
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
