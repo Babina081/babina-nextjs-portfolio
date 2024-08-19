@@ -222,7 +222,7 @@ const Intro = () => {
             <BsArrowRight className="opacity-75 group-hover:translate-x-1 transition"></BsArrowRight>
           </Link>
           <a
-            href="/cv.pdf"
+            href="/CV.pdf"
             className="group btn-gradient-text px-7 py-3 items-center flex gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack  dark:text-black/80"
             target="_blank"
             download
