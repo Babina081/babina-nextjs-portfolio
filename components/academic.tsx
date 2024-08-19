@@ -27,7 +27,7 @@ const Academic = () => {
   const translateY = useTransform(scrollYProgress, [0, 1], [200, -200]);
 
   return (
-    <div ref={sectionRef} className="scroll-mt-28 mb-40 ">
+    <div ref={sectionRef} className="scroll-mt-28 mb-40 " id="academic">
       <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative group">
         <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
           Lookover My Educational History

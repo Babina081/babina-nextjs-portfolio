@@ -87,6 +87,7 @@ const Intro = () => {
       <section
         ref={introRef}
         className="mt-14 pb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]  "
+        id="home"
       >
         <div className="flex items-center justify-center">
           <div className="relative">

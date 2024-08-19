@@ -38,6 +38,7 @@ const Contact = () => {
         opacity: opacityProgress,
       }}
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center max-w-[53rem] scroll-mt-28 "
+      id="contact"
     >
       <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
         Let's Initiate our Converstion

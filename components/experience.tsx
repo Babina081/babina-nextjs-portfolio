@@ -15,7 +15,7 @@ const Experience = () => {
   const { theme } = useTheme();
 
   return (
-    <section ref={ref} className="mb-28 scroll-mt-28 sm:mb-40 ">
+    <section ref={ref} className="mb-28 scroll-mt-28 sm:mb-40 " id="experience">
       <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
         Checkout my work real world experience
       </p>
