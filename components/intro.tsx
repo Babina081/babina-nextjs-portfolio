@@ -14,8 +14,11 @@ import img2 from "@/public/intro2.png";
 import img3 from "@/public/intro3.png";
 import starImage from "@/public/star.png";
 import meImage from "@/public/me.jpg";
+import { SparklesCore } from "./ui/sparkles";
+import { useTheme } from "@/context/theme-context";
 
 const Intro = () => {
+  const { theme } = useTheme();
   const introRef = useRef(null);
   const { ref: sectionInViewRef } = useSectionInView("Home", 0.5);
 
@@ -89,6 +92,17 @@ const Intro = () => {
         className="mt-14 pb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]  "
         id="home"
       >
+        <div className="w-full absolute inset-0 h-screen">
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={0.6}
+            maxSize={1.4}
+            particleDensity={100}
+            className="w-full h-full "
+            particleColor={theme === "light" ? "#0000FF" : "#FFFFFF"}
+          />
+        </div>
         <div className="flex items-center justify-center">
           <div className="relative">
             <motion.div
@@ -184,7 +198,7 @@ const Intro = () => {
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          className=" mt-2 px-4 font-medium !leading-[1.5] text-2xl sm:text-4xl"
+          className=" mt-2 px-4 font-medium !leading-[1.5] text-2xl sm:text-4xl relative z-10"
         >
           <span className="font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text dark:from-white dark:to-blue-300">
             Hey! I'm{" "}
@@ -192,7 +206,7 @@ const Intro = () => {
         </motion.h1>
 
         <motion.h1
-          className="text-5xl lg:text-6xl xl:text-7xl font-sans pr-4 mb-10 tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text dark:from-white dark:to-blue-300 font-bold"
+          className="text-5xl lg:text-6xl xl:text-7xl font-sans pr-4 mb-10 tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text dark:from-white dark:to-blue-300 font-bold  relative z-10"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -208,7 +222,7 @@ const Intro = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+          className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium relative z-10"
         >
           <Link
             href="#contact"
