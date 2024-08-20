@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const CTA = () => {
   return (
-    <div className="fixed bottom-5 left-5  flex flex-col gap-1 items-center justify-center p-2 rounded-lg ">
+    <div className="fixed bottom-5 left-5  flex flex-col gap-1 items-center justify-center p-2 rounded-lg   z-20">
       {" "}
       <motion.span
         className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] [background-size:200%] text-transparent bg-clip-text font-medium uppercase "
