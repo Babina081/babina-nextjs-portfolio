@@ -100,7 +100,7 @@ const Intro = () => {
             maxSize={1.4}
             particleDensity={100}
             className="w-full h-full "
-            particleColor={theme === "light" ? "#D1E9F6" : "#FFFFFF"}
+            particleColor={theme === "light" ? "#5B99C2" : "#FFFFFF"}
           />
         </div>
         <div className="flex items-center justify-center">
