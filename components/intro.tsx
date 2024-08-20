@@ -170,15 +170,16 @@ const Intro = () => {
                   ease: "easeInOut",
                 }}
               ></motion.img>
-              <Image
-                src={meImage}
-                alt=""
-                width={192}
-                height={192}
-                className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl "
-                quality={95}
-                priority={true}
-              ></Image>
+             
+                <Image
+                  src={meImage}
+                  alt=""
+                  width={192}
+                  height={192}
+                  className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl "
+                  quality={95}
+                  priority={true}
+                ></Image>
             </motion.div>
             <motion.span
               initial={{ opacity: 0, scale: 0 }}
