@@ -108,7 +108,7 @@ export const projectsData = [
     tags: ["TypeScript", "Next.js", "Tailwind", "Zod", "Nodejs", "Mongodb"],
     imageUrl: foodOrder,
     gitpage: "https://github.com/Babina081/food-order-nextjs",
-    demo: "https://food-order-nextjs-chi.vercel.app/",
+    demo: "https://food-order-nextjs-six.vercel.app/home",
   },
   {
     title: "E-shop",
