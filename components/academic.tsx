@@ -5,6 +5,8 @@ import SectionHeading from "./section-heading";
 import { motion, useScroll, useTransform } from "framer-motion";
 import capImage from "@/public/cap.png";
 import { academicData } from "@/lib/data";
+import udemyCertificate from "@/public/udemy-certificate.jpg";
+import Image from "next/image";
 
 const Academic = () => {
   // const { ref } = useSectionInView("Academic", 0.75);
@@ -85,6 +87,9 @@ const Academic = () => {
           className="hidden lg:block top-[600px] left-[448px] md:absolute rotate-[30deg]"
           style={{ rotate: 30, translateY: translateY }}
         ></motion.img>
+        {/* <div>
+        <Image src={udemyCertificate} alt="udemy certificate" className=""></Image>
+      </div> */}
       </div>
     </div>
   );
