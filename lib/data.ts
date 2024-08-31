@@ -105,7 +105,7 @@ export const projectsData = [
     title: "Food Order App",
     description:
       "I created a full-stack food app, handling both frontend and backend development. The app allows users to browse, order, and manage food items, providing a seamless and interactive experience.",
-    tags: ["TypeScript", "Next.js", "Tailwind", "Zod", "Nodejs", "Mongodb"],
+    tags: ["TypeScript", "Next.js", "Tailwind", "Zod", "Nodejs", "Mongodb","Shadcn"],
     imageUrl: foodOrder,
     gitpage: "https://github.com/Babina081/food-order-nextjs",
     demo: "https://food-order-nextjs-six.vercel.app/home",
