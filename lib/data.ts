@@ -17,6 +17,7 @@ import xClone from "@/public/projects/x-clone.png";
 import eshop from "@/public/projects/eshop-app.png";
 import chatAI from "@/public/projects/chatAI.png";
 import skygyan from "@/public/projects/skygyan.jpg";
+import wedapp from "@/public/projects/wedapp.png";
 import saas from "@/public/projects/saas-app.png";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -105,10 +106,27 @@ export const projectsData = [
     title: "Food Order App",
     description:
       "I created a full-stack food app, handling both frontend and backend development. The app allows users to browse, order, and manage food items, providing a seamless and interactive experience.",
-    tags: ["TypeScript", "Next.js", "Tailwind", "Zod", "Nodejs", "Mongodb","Shadcn"],
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind",
+      "Zod",
+      "Nodejs",
+      "Mongodb",
+      "Shadcn",
+    ],
     imageUrl: foodOrder,
     gitpage: "https://github.com/Babina081/food-order-nextjs",
     demo: "https://food-order-nextjs-six.vercel.app/home",
+  },
+  {
+    title: "Wed App",
+    description:
+      "WedApp is a Next.js web app for effortless event management. It provides a seamless and organized planning experience for various types of events.",
+    tags: ["TypeScript", "Next.js", "Tailwind", "Redux Toolkit"],
+    imageUrl: wedapp,
+    gitpage: "https://github.com/Babina081/wed-app",
+    demo: "https://wed-app-seven.vercel.app/",
   },
   {
     title: "E-shop",

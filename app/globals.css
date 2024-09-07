@@ -393,3 +393,126 @@ html.dark {
   justify-content: center;
   align-items: center;
 }
+
+.floating-nav svg {
+  width: 50vw;
+  height: 25vw;
+}
+
+#toggle-menu {
+  cursor: pointer;
+}
+
+#toggle-menu #vertical-rectangle {
+  transition: all 0.2s ease-in-out;
+}
+
+.menu {
+  transform-origin: bottom center;
+  transform: scale(0);
+  transition: all 0.3s cubic-bezier(0.3, 0.3, 0.5, 1.2);
+  transition-delay: var(--transition-delay);
+}
+
+.menu:nth-of-type(2) {
+  --transition-delay: 0.2s;
+}
+.menu:nth-of-type(3) {
+  --transition-delay: 0.15s;
+}
+.menu:nth-of-type(4) {
+  --transition-delay: 0.1s;
+}
+.menu:nth-of-type(5) {
+  --transition-delay: 0.05s;
+}
+
+.menu--active {
+  transform: scale(1);
+}
+
+.menu--close {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .container svg {
+    width: 80vw;
+    height: 40vw;
+  }
+}
+
+.preloader {
+  position: relative;
+  width: 30rem;
+  aspect-ratio: 1 / 1;
+}
+
+.ring {
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background-color: transparent;
+}
+
+.ring1 {
+  width: 22rem;
+  border-top: 0.5rem solid #4c4c50;
+  rotate: -45deg;
+  animation: spin 3.2s linear infinite;
+}
+
+.ring2 {
+  width: 20rem;
+  border-top: 0.5rem solid #646468;
+  rotate: -90deg;
+  animation: spin 3.4s linear infinite;
+}
+
+.ring3 {
+  width: 18rem;
+  border-top: 0.5rem solid #7d7d81;
+  rotate: -135deg;
+  animation: spin 3.6s linear infinite;
+}
+
+.ring4 {
+  width: 16rem;
+  border-top: 0.5rem solid #97979b;
+  rotate: -180deg;
+  animation: spin 3.8s linear infinite;
+}
+
+.ring5 {
+  width: 14rem;
+  border-top: 0.5rem solid #b1b1b6;
+  rotate: -225deg;
+  animation: spin 4s linear infinite;
+}
+
+.ring6 {
+  width: 12rem;
+  border-top: 0.5rem solid #cdcdd2;
+  rotate: -270deg;
+  animation: spin 4.2s linear infinite;
+}
+
+.ring7 {
+  width: 10rem;
+  border-top: 0.5rem solid #e9e9ee;
+  rotate: -315deg;
+  animation: spin 4.4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}

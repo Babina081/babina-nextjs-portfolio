@@ -11,6 +11,7 @@ import CTA from "@/components/cta";
 import StarMouse from "@/components/theme-and-mouse/star-mouse";
 import CircleElasticMouse from "@/components/theme-and-mouse/circle-elastic-mouse";
 import LoadingWrapper from "@/components/theme-and-mouse/loading-wrapper";
+import FloatingNav from "@/components/ui/floating-nav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -40,6 +41,7 @@ export default function RootLayout({
               <Footer></Footer>
               <ThemeSwitch></ThemeSwitch>
               <CTA></CTA>
+              {/* <FloatingNav></FloatingNav> */}
               <Toaster position="top-right"></Toaster>
         </LoadingWrapper>
             </ActiveSectionContextProvider>
