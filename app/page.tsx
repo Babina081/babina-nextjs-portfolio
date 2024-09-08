@@ -1,5 +1,6 @@
 import About from "@/components/about";
 import Academic from "@/components/academic";
+import Achievement from "@/components/achievement";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import { InfiniteMovingCardsDemo } from "@/components/infinite-moving-cards-demo";
@@ -24,6 +25,7 @@ export default function Home() {
       {/* <PlaceItemInCircle></PlaceItemInCircle> */}
       {/* <Experience></Experience> */}
       <TimelineDemo></TimelineDemo>
+      <Achievement></Achievement>
       {/* <Academic></Academic> */}
       <Contact></Contact>
     </main>
