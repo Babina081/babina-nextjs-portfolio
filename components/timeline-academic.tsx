@@ -43,7 +43,7 @@ export function TimelineDemo() {
             <p className="text-xl text-red-400 font-bold">Skybase Innovation</p>
             <p className="text-lg underline">Pokhara, Nepal</p>
           </div>
-          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl text-justify mt-10">
+          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10">
             After a few months break, I joined an IT company as a React intern,
             with the goal of becoming a frontend developer specializing in
             React.js. During this internship, I mastered Next.js and Tailwind
@@ -118,7 +118,7 @@ export function TimelineDemo() {
             </p>
             <p className="text-lg underline">Kathmandu, Nepal</p>
           </div>
-          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl text-justify mt-10">
+          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10">
             After completing my final semester exams for my bachelor's degree, I
             took on a remote role as a technical writer, working for nearly four
             months. This was my first real-world job opportunity, and it
@@ -192,7 +192,7 @@ export function TimelineDemo() {
             <p className="italic">Affiliated: Pokhara University</p>
             <p className="text-lg underline">Phire, Pokhara</p>
           </div>
-          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl text-justify mt-10">
+          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10">
             The real turning point in my academic journey was when I joined an
             engineering college to pursue computer engineering. My curiosity
             about the rapid advancements in technology pushed me towards this
@@ -219,7 +219,7 @@ export function TimelineDemo() {
             <p className="italic">Affiliated: Government of Nepal</p>
             <p className="text-lg underline">Nayagaun, Pokhara</p>
           </div>
-          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl text-justify mt-10">
+          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10">
             After completing my SLC, I decided to pursue my +2 in the science
             faculty, driven by a passion for the technical world. I knew early
             on that I wanted to dive deeper into this field, which is why I
@@ -244,7 +244,7 @@ export function TimelineDemo() {
             <p className="italic">Affiliated: Government of Nepal</p>
             <p className="text-lg underline">Sanepa, Lalitpur</p>
           </div>
-          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl text-justify mt-10">
+          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10">
             Completing my SLC was a significant milestone in my academic life.
             Those years were filled with wonderful experiences, from learning
             new things every day to making lifelong friends. The teachers were
