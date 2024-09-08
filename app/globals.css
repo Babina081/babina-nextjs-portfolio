@@ -7,7 +7,8 @@
   --circle-color: black;
   --star-color: #001e80;
   --spinner-border-color: #001e80;
-  --circle-background: black;--dots-color:blue;
+  --circle-background: black;
+  --dots-color: #001e80;
 }
 
 * {
@@ -34,7 +35,7 @@ html.dark {
   --star-color: yellow;
   --spinner-border-color: white;
   --circle-background: white;
-  --dots-color:white;
+  --dots-color: white;
 }
 
 .borderBlack {
