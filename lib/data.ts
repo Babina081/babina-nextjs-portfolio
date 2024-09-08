@@ -43,13 +43,13 @@ export const links = [
     hash: "#skills",
     icon: React.createElement(PiMedalFill),
   },
+  // {
+  //   name: "Experience",
+  //   hash: "#experience",
+  //   icon: React.createElement(FaUserGraduate),
+  // },
   {
-    name: "Experience",
-    hash: "#experience",
-    icon: React.createElement(FaUserGraduate),
-  },
-  {
-    name: "Academic",
+    name: "Qualifications",
     hash: "#academic",
     icon: React.createElement(FaUserGraduate),
   },
@@ -174,7 +174,6 @@ export const projectsData = [
     gitpage: "https://github.com/Babina081/x-next",
     demo: "https://x-next-brown.vercel.app/",
   },
-
   {
     title: "AI chat with files App",
     description:
@@ -203,6 +202,7 @@ export const skillsData = [
   { name: "Redux", image: "/skill-images/redux.png" },
   { name: "Postman", image: "/skill-images/postman.png" },
   { name: "Git", image: "/skill-images/git.png" },
+  { name: "Jest", image: "/skill-images/jest.jpg" },
 ] as const;
 
 export const academicData = [
