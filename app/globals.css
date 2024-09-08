@@ -7,6 +7,7 @@
   --circle-color: black;
   --star-color: #001e80;
   --spinner-border-color: #001e80;
+  --circle-background: black;
 }
 
 * {
@@ -32,6 +33,7 @@ html.dark {
   --circle-color: white;
   --star-color: yellow;
   --spinner-border-color: white;
+  --circle-background: white;
 }
 
 .borderBlack {
@@ -515,4 +517,69 @@ html.dark {
   100% {
     rotate: 360deg;
   }
+}
+
+/* search */
+/* Add this to your global stylesheet or module CSS file */
+@keyframes dot-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.dot-container {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background-color: white; /* Change to desired color */
+  border-radius: 50%;
+  animation: dot-blink 1.5s infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* circle */
+.circle-container {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  list-style-type: none;
+  border: 0.5px solid var(--bg);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transform: rotate(-90deg);
+}
+
+.circle-item {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--bg);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.circle-info {
+  transform: rotate(90deg);
+  font: 0.75rem helvetica, sans-serif;
+  color: white;
 }
