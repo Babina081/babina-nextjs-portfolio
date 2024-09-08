@@ -54,6 +54,11 @@ export const links = [
     icon: React.createElement(FaUserGraduate),
   },
   {
+    name: "Achievement",
+    hash: "#achievement",
+    icon: React.createElement(FaUserGraduate),
+  },
+  {
     name: "Contact",
     hash: "#contact",
     icon: React.createElement(FaMessage),
