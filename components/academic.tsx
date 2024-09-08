@@ -13,7 +13,7 @@ const Academic = () => {
 
   const sectionRef = useRef(null);
   // Use your custom hook useSectionInView with the ref
-  const { ref: sectionInViewRef } = useSectionInView("Academic", 0.75);
+  const { ref: sectionInViewRef } = useSectionInView("Qualifications", 0.75);
 
   // Combine the refs using useEffect
   useEffect(() => {

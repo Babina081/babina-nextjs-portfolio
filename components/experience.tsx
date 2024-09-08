@@ -11,7 +11,7 @@ import { experiencesData } from "@/lib/data";
 import { useTheme } from "@/context/theme-context";
 
 const Experience = () => {
-  const { ref } = useSectionInView("Experience", 0.5);
+  const { ref } = useSectionInView("Qualifications", 0.5);
   const { theme } = useTheme();
 
   return (
