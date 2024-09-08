@@ -22,13 +22,15 @@ const Projects = () => {
       </p>
       <SectionHeading>My Projects</SectionHeading>
 
-      {projectsData.map((project, index) => {
-        return (
-          <React.Fragment key={index}>
-            <Project {...project} />
-          </React.Fragment>
-        );
-      })}
+      <div className="grid md:grid-cols-2 gap-4">
+        {projectsData.map((project, index) => {
+          return (
+            <React.Fragment key={index}>
+              <Project {...project} />
+            </React.Fragment>
+          );
+        })}
+      </div>
     </section>
   );
 };
