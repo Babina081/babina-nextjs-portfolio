@@ -558,7 +558,7 @@ html.dark {
 }
 
 /* circle */
-.circle-container {
+/* .circle-container {
   position: relative;
   width: 15rem;
   height: 15rem;
@@ -584,4 +584,4 @@ html.dark {
   transform: rotate(90deg);
   font: 0.75rem helvetica, sans-serif;
   color: white;
-}
+} */

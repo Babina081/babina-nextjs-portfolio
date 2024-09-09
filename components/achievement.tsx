@@ -27,7 +27,7 @@ const Achievement = () => {
         Showcasing my commitment to excellence
       </p>
       <SectionHeading>My Achievement</SectionHeading>
-      <div className="flex flex-col md:flex-row gap-8 md:gap-14 w-full p-4 md:p-10  my-20 rounded-lg border items-center justify-center ">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-14 w-full p-4 md:p-10  my-20 rounded-lg  items-center justify-center shadow-md dark:shadow-white/10 border border-blue-500/10">
         <Image
           src={udemy}
           alt="udemy"
@@ -48,7 +48,7 @@ const Achievement = () => {
             <a
               href="https://www.udemy.com/certificate/UC-a4453e3d-657e-427b-9ae8-722eb3bf8b74/"
               target="_blank"
-              className="text-blue-300 underline"
+              className="text-blue-500 underline"
             >
               View Certificate
             </a>

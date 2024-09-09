@@ -4,6 +4,7 @@ import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 const fadeInAnimationsVariants = {
   initial: {
     opacity: 0,
@@ -140,20 +141,11 @@ const Skills = () => {
         What Skill I Am Equipped With
       </p>
       <SectionHeading>My Skills</SectionHeading>
-      {/* <motion.ul
-        style={{ translateY: translateY }}
-        className="flex flex-wrap justify-center space-x-4 space-y-4 mt-12 text-lg text-gray-800"
-      >
+      <ul className="flex sm:hidden flex-wrap justify-center space-x-4 space-y-4 mt-12 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
-          <motion.li
-            variants={fadeInAnimationsVariants}
-            initial="initial"
-            whileInView="animate"
-            // viewport={{ once: true }}
+          <li
             key={index}
-            custom={index}
             className="bg-white borderBlack rounded-xl px-5 py-3 flex items-center justify-between flex-col gap-2 dark:bg-white/10 dark:text-white/80 "
-            style={{ rotate: -20 }}
           >
             <Image
               src={skill.image}
@@ -164,12 +156,18 @@ const Skills = () => {
               className="bg-transparent"
             ></Image>
             {skill.name}
-          </motion.li>
+          </li>
         ))}
-      </motion.ul> */}
+      </ul>
       <div
-        style={{ position: "relative", width: "30rem", height: "30rem" }}
-        className="my-32"
+        style={{
+          position: "relative",
+          width: "60vw",
+          height: "60vh",
+          minHeight: "30rem",
+          minWidth: "30rem",
+        }}
+        className="my-32  hidden sm:block"
       >
         {/* Outer circle */}
         <ul
@@ -271,7 +269,6 @@ const Skills = () => {
             placeItems: "center",
             transform: `translate(-50%, -50%) rotate(${rotationAngle}deg)`, // Center and apply rotation
             transition: "transform 0.9s linear", // Smooth transition
-           
           }}
         >
           {innerCircleData.map((skill, index) => (
@@ -284,7 +281,7 @@ const Skills = () => {
                 position: "absolute",
                 width: "2rem",
                 height: "2rem",
-               // Use CSS variable for color
+                // Use CSS variable for color
                 borderRadius: "50%",
                 display: "grid",
                 placeItems: "center",

@@ -20,7 +20,7 @@ export function TimelineDemo() {
     {
       title: "Present",
       content: (
-        <div className="flex flex-col items-start justify-start border border-blue-500/10 pt-6 rounded-lg w-full">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 pt-6 rounded-lg w-full">
           <div className="w-full flex items-center justify-center gap-2">
             <SectionHeading>In Search </SectionHeading>
             <div className="dot-container">
@@ -35,7 +35,7 @@ export function TimelineDemo() {
     {
       title: "2024",
       content: (
-        <div className="flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full">
           <div className="w-full flex items-center justify-center">
             <SectionHeading>Front-End Developer - Intern</SectionHeading>
           </div>
@@ -108,7 +108,7 @@ export function TimelineDemo() {
     {
       title: "2023",
       content: (
-        <div className="flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full">
           <div className="w-full flex items-center justify-center">
             <SectionHeading>Technical Research Engineer</SectionHeading>
           </div>
@@ -181,7 +181,7 @@ export function TimelineDemo() {
     {
       title: "2022",
       content: (
-        <div className="flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full">
           <div className="w-full flex items-center justify-center">
             <SectionHeading>Bachelor in Computer Engineering</SectionHeading>
           </div>
@@ -208,7 +208,7 @@ export function TimelineDemo() {
     {
       title: "2017",
       content: (
-        <div className="flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg">
           <div className="w-full flex justify-center items-center">
             <SectionHeading>Higher Secondary (+2 Level)</SectionHeading>
           </div>
@@ -235,7 +235,7 @@ export function TimelineDemo() {
     {
       title: "2015",
       content: (
-        <div className="flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg">
           <div className="flex w-full justify-center items-center">
             <SectionHeading>School Leaving Certificate (SLC)</SectionHeading>
           </div>
