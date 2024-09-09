@@ -1,7 +1,6 @@
 "use client";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { useTheme } from "@/context/theme-context";
-import React from "react";
 
 const Loading = () => {
   const { theme } = useTheme();

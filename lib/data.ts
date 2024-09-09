@@ -1,3 +1,12 @@
+import chatAI from "@/public/projects/chatAI.png";
+import eshop from "@/public/projects/eshop-app.png";
+import foodOrder from "@/public/projects/food-order-app.png";
+import gradeCalculator from "@/public/projects/grade-calculator-app.png";
+import inventoryManagement from "@/public/projects/inventory management.png";
+import saas from "@/public/projects/saas-app.png";
+import skygyan from "@/public/projects/skygyan.jpg";
+import wedapp from "@/public/projects/wedapp.png";
+import xClone from "@/public/projects/x-clone.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import {
@@ -7,20 +16,9 @@ import {
   FaUser,
   FaUserGraduate,
 } from "react-icons/fa";
-import { FaMessage } from "react-icons/fa6";
-import { PiMedalFill } from "react-icons/pi";
-import { LuGraduationCap } from "react-icons/lu";
-import gradeCalculator from "@/public/projects/grade-calculator-app.png";
-import foodOrder from "@/public/projects/food-order-app.png";
-import inventoryManagement from "@/public/projects/inventory management.png";
-import xClone from "@/public/projects/x-clone.png";
-import eshop from "@/public/projects/eshop-app.png";
-import chatAI from "@/public/projects/chatAI.png";
-import skygyan from "@/public/projects/skygyan.jpg";
-import wedapp from "@/public/projects/wedapp.png";
-import saas from "@/public/projects/saas-app.png";
-import { FaPhone } from "react-icons/fa6";
+import { FaMessage, FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
+import { PiMedalFill } from "react-icons/pi";
 
 export const links = [
   {

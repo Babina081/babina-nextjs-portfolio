@@ -1,12 +1,10 @@
 "use client";
-import { useSectionInView } from "@/lib/hooks";
-import React, { useEffect, useRef } from "react";
-import SectionHeading from "./section-heading";
-import { motion, useScroll, useTransform } from "framer-motion";
-import capImage from "@/public/cap.png";
 import { academicData } from "@/lib/data";
-import udemyCertificate from "@/public/udemy-certificate.jpg";
-import Image from "next/image";
+import { useSectionInView } from "@/lib/hooks";
+import capImage from "@/public/cap.png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
+import SectionHeading from "./section-heading";
 
 const Academic = () => {
   // const { ref } = useSectionInView("Academic", 0.75);

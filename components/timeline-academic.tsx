@@ -1,7 +1,6 @@
 "use client";
-import Image from "next/image";
-import React, { useState } from "react";
 import { Timeline } from "@/components/ui/timeline";
+import { useState } from "react";
 import SectionHeading from "./section-heading";
 
 type ModalId = "skybase" | "entegra" | null;
@@ -23,10 +22,10 @@ export function TimelineDemo() {
         <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 pt-6 rounded-lg w-full">
           <div className="w-full flex items-center justify-center gap-2">
             <SectionHeading>In Search </SectionHeading>
-            <div className="dot-container">
-              <div className="dot"></div>
-              <div className="dot"></div>
-              <div className="dot"></div>
+            <div className="dot-container ">
+              <div className="dot "></div>
+              <div className="dot "></div>
+              <div className="dot "></div>
             </div>
           </div>
         </div>

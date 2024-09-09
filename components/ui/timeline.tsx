@@ -1,14 +1,12 @@
 "use client";
+import { useSectionInView } from "@/lib/hooks";
 import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
   motion,
+  useScroll,
+  useTransform
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import SectionHeading from "../section-heading";
-import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
 
 interface TimelineEntry {
   title: string;

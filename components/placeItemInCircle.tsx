@@ -1,6 +1,6 @@
 "use client";
 import { skillsData } from "@/lib/data"; // Assuming skillsData is an array of skills
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const PlaceItemInCircle = () => {
   const outerContainerRef = useRef<HTMLUListElement | null>(null);

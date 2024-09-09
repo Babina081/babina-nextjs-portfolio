@@ -1,13 +1,12 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import SectionHeading from "./section-heading";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
-import { useFormStatus } from "react-dom";
-import SubmitBtn from "./submit-btn";
-import { toast } from "react-hot-toast";
 import { contactDetails } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { toast } from "react-hot-toast";
+import SectionHeading from "./section-heading";
+import SubmitBtn from "./submit-btn";
 
 const Contact = () => {
   const contactRef = useRef(null);

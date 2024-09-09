@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
-import { motion, useScroll, useTransform } from "framer-motion";
 import pyramidImage from "@/public/pyramid.png";
 import tubeImage from "@/public/tube.png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
+import SectionHeading from "./section-heading";
 const About = () => {
   const aboutRef = useRef(null);
   const { ref: sectionInViewRef } = useSectionInView("About", 0.25);

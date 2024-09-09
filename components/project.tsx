@@ -1,12 +1,11 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import { projectsData } from "@/lib/data";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useScroll, motion, useTransform } from "framer-motion";
+import Link from "next/link";
+import { useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaRegCirclePlay } from "react-icons/fa6";
-import Link from "next/link";
-import { useSectionInView } from "@/lib/hooks";
 
 type ProjectProps = (typeof projectsData)[number];
 

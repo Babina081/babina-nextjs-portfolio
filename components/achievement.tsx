@@ -1,9 +1,9 @@
 "use client";
 import { useSectionInView } from "@/lib/hooks";
-import React, { useEffect, useRef } from "react";
-import SectionHeading from "./section-heading";
 import udemy from "@/public/udemy.png";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import SectionHeading from "./section-heading";
 
 const Achievement = () => {
   const achievementRef = useRef(null);

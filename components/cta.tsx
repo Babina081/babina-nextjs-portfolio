@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
+import { motion } from "framer-motion";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 const CTA = () => {
   return (

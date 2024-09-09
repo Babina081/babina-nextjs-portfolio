@@ -1,17 +1,16 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/header";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/components/footer";
-import { Toaster } from "react-hot-toast";
-import ThemeSwitch from "@/components/theme-and-mouse/theme-switch";
-import ThemeContextProvider from "@/context/theme-context";
 import CTA from "@/components/cta";
-import StarMouse from "@/components/theme-and-mouse/star-mouse";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import CircleElasticMouse from "@/components/theme-and-mouse/circle-elastic-mouse";
 import LoadingWrapper from "@/components/theme-and-mouse/loading-wrapper";
-import FloatingNav from "@/components/ui/floating-nav";
+import StarMouse from "@/components/theme-and-mouse/star-mouse";
+import ThemeSwitch from "@/components/theme-and-mouse/theme-switch";
+import ActiveSectionContextProvider from "@/context/active-section-context";
+import ThemeContextProvider from "@/context/theme-context";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
+import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

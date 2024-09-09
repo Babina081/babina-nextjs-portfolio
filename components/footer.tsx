@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { Power4, Elastic, gsap } from "gsap";
+import { Elastic, gsap, Power4 } from "gsap";
+import { useEffect, useRef } from "react";
 import { FaHandPointUp } from "react-icons/fa";
 
 const Footer = () => {

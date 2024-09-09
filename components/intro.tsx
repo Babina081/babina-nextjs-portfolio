@@ -1,21 +1,21 @@
 "use client";
-import Image from "next/image";
-import React, { useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
+import { useTheme } from "@/context/theme-context";
+import { useSectionInView } from "@/lib/hooks";
 import img1 from "@/public/intro1.png";
 import img2 from "@/public/intro2.png";
 import img3 from "@/public/intro3.png";
-import starImage from "@/public/star.png";
 import meImage from "@/public/me.jpg";
+import starImage from "@/public/star.png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { gsap } from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { BsArrowRight } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
 import { SparklesCore } from "./ui/sparkles";
-import { useTheme } from "@/context/theme-context";
 
 const Intro = () => {
   const { theme } = useTheme();

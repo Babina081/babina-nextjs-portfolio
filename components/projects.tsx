@@ -1,9 +1,9 @@
 "use client";
-import React, { useCallback, useEffect, useRef } from "react";
-import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
-import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
+import React, { useEffect, useRef } from "react";
+import Project from "./project";
+import SectionHeading from "./section-heading";
 
 const Projects = () => {
   const projectRef = useRef(null);

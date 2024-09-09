@@ -1,48 +1,26 @@
 "use client";
-import React, { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+
 
 const ScrollText = () => {
-  gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-    gsap.to(".c1 h1", {
-      duration: 8,
-      // x: "-60%",
-      transform: "translateX(-60%)",
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".c1 h1",
-        start: "top center ",
-        end: () => {
-          const element = document.querySelector(".c1") as HTMLElement;
-          return element?.offsetHeight ? `+=${element.offsetHeight}` : "";
-        },
-        scrub: 4,
-        // pin: ".c1 h1",
-        // markers: {
-        //   startColor: "red",
-        //   endColor: "blue",
-        //   fontSize: "4rem",
-        //   indent: 200,
-        // },
-        // pinType: "fixed",
-        // toggleClass: "red",
-        // pinSpacing: true,
-        // anticipatePin: 1,
-        // pinReparent: true,
-        // toggleActions: "restart reverse none none",
-      },
-    });
-  }, []);
+
   return (
-    <>
-      <div className=" container-about c1 mb-28 overflow-hidden w-screen z-20">
-        <h1 className="dark:bg-gradient-to-t dark:from-white dark:to-blue-300 dark:text-transparent dark:bg-clip-text ">
-          Explore My Portfolio
+    <section className="flex items-center justify-center  mb-28 overflow-hidden max-w-5xl z-20 h-screen  mx-auto">
+      <div className="container-scroll relative max-w-5xl mx-0 my-auto ">
+        <h1 className=" reveal flex items-center justify-center text-center gap-4 flex-col">
+          <span className=" mb-10 flex justify-between w-full mx-auto ">
+            <FaQuoteLeft className=" text-left h-10 w-10 font-bold" />
+            <FaQuoteRight className=" text-right h-10 w-10 font-bold" />
+          </span>
+          <span className="bg-gradient-to-b from-black to-blue-600 dark:from-white dark:to-blue-300 text-transparent bg-clip-text font-extrabold text-3xl md:text-5xl ">
+            Crafting Tomorrow's Code, Today.
+          </span>
+          <span className="bg-gradient-to-b from-black to-blue-600 dark:from-white dark:to-blue-300 text-transparent bg-clip-text font-extrabold text-3xl md:text-5xl ">
+            Transforming Ideas into Digital Masterpieces.
+          </span>
         </h1>
       </div>
-    </>
+    </section>
   );
 };
 
