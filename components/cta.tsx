@@ -23,6 +23,8 @@ const CTA = () => {
         <motion.a
           className="bg-white  p-4 text-gray-700  flex items-center gap-2 rounded-full    focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack  dark:bg-white/10 dark:text-white/60 shadow-md"
           href="https://www.linkedin.com/in/babina-g-8303631b8/"
+           rel="noreferrer"
+              aria-label="linkedin profile"
           target="_blank"
           animate={{ backgroundPositionX: "100%" }}
           transition={{
@@ -39,6 +41,8 @@ const CTA = () => {
           className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem]  focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/Babina081"
           target="_blank"
+           rel="noreferrer"
+              aria-label="github profile"
         >
           <FaGithubSquare></FaGithubSquare>
         </motion.a>

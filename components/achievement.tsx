@@ -49,6 +49,8 @@ const Achievement = () => {
               href="https://www.udemy.com/certificate/UC-a4453e3d-657e-427b-9ae8-722eb3bf8b74/"
               target="_blank"
               className="text-blue-500 underline"
+              rel="noreferrer"
+              aria-label="udemy certificate"
             >
               View Certificate
             </a>

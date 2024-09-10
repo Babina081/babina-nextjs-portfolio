@@ -248,6 +248,8 @@ const Intro = () => {
           </Link>
           <a
             href="/CV.pdf"
+             rel="noreferrer"
+              aria-label="resume download"
             className="group btn-gradient-text px-7 py-3 items-center flex gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack  dark:text-black/80"
             target="_blank"
             download
