@@ -5,7 +5,7 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 const ScrollText = () => {
 
   return (
-    <section className="flex items-center justify-center  mb-28 overflow-hidden max-w-5xl z-20 h-screen  mx-auto">
+    <section className="mt-14 pb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] flex items-center justify-center  mb-28 overflow-hidden z-20 h-screen  mx-auto">
       <div className="container-scroll relative max-w-5xl mx-0 my-auto ">
         <h1 className=" reveal flex items-center justify-center text-center gap-4 flex-col">
           <span className=" mb-10 flex justify-between w-full mx-auto ">

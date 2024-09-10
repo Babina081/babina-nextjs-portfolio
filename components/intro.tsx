@@ -89,7 +89,7 @@ const Intro = () => {
     <>
       <section
         ref={introRef}
-        className="mt-14 pb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]  "
+        className="mt-14 pb-28 max-w-3xl mx-auto  text-center sm:mb-0 scroll-mt-[100rem]  inline-block"
         id="home"
       >
         <div className="w-full absolute inset-0 h-screen">
@@ -205,7 +205,6 @@ const Intro = () => {
             Hey! I'm{" "}
           </span>
         </motion.h1>
-
         <motion.h1
           className="text-5xl lg:text-6xl xl:text-7xl font-sans pr-4 mb-10 tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text dark:from-white dark:to-blue-300 font-bold  relative z-10"
           initial={{ opacity: 0, y: 100 }}
@@ -213,8 +212,14 @@ const Intro = () => {
         >
           BABINA GURUNG
           <br />
-          <span className="text-primary" id="typewriter"></span>
-          <span id="typewriter-cursor" className="text-primary">
+          <span
+            className="text-primary text-3xl sm:text-7xl whitespace-nowrap overflow-hidden"
+            id="typewriter"
+          ></span>
+          <span
+            id="typewriter-cursor"
+            className="text-primary text-3xl sm:text-7xl "
+          >
             |
           </span>
         </motion.h1>
