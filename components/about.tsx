@@ -55,7 +55,7 @@ const About = () => {
           <p className="mb-3 tracking-tighter">
             <span className="font-bold text-lg">Hello!</span> I'm{" "}
             <span className="font-bold">Babina Gurung</span> from the beautiful
-            city of <span className="italic">Pokhara, Nepal</span>, and I hold a
+            city <span className="italic">Pokhara, Nepal</span>, and I hold a
             degree in <span className="underline">computer engineering</span>.
             My passion for <span className="font-semibold">coding</span> and web
             development drives me to constantly explore and master new

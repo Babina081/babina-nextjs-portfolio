@@ -206,29 +206,34 @@ const Intro = () => {
           </span>
         </motion.h1>
         <motion.h1
-          className="text-5xl lg:text-6xl xl:text-7xl font-sans pr-4 mb-10 tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text dark:from-white dark:to-blue-300 font-bold  relative z-10"
+          className="text-5xl lg:text-6xl xl:text-7xl font-sans pr-4 mb-10 tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text dark:from-white dark:to-blue-300 font-bold  relative z-10 "
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
           BABINA GURUNG
           <br />
-          <span
-            className="text-primary text-3xl sm:text-7xl whitespace-nowrap overflow-hidden"
-            id="typewriter"
-          ></span>
-          <span
-            id="typewriter-cursor"
-            className="text-primary text-3xl sm:text-7xl "
-          >
-            |
-          </span>
+          {/* Typewriter Container */}
+          <div className="relative text-primary text-3xl sm:text-5xl lg:text-7xl max-w-3xl   bg-red-100 text-white w-full mt-10">
+            <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text dark:from-white dark:to-blue-300 w-96 flex-grow ">
+              <span
+                id="typewriter"
+                className="text-primary text-3xl sm:text-5xl  "
+              ></span>
+              <span
+                id="typewriter-cursor"
+                className="text-primary text-3xl sm:text-5xl  "
+              >
+                |
+              </span>
+            </div>
+          </div>
         </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium relative z-10"
+          className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium relative z-10 mt-32"
         >
           <Link
             href="#contact"
