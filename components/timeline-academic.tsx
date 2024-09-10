@@ -2,6 +2,7 @@
 import { Timeline } from "@/components/ui/timeline";
 import { useState } from "react";
 import SectionHeading from "./section-heading";
+import Image from "next/image";
 
 type ModalId = "skybase" | "entegra" | null;
 
@@ -92,7 +93,7 @@ export function TimelineDemo() {
                 </button>
 
                 <div className="w-full h-full flex justify-center items-center">
-                  <img
+                  <Image
                     src="/skybase.jpeg" // Path to your Skybase certificate image
                     alt="Skybase Certificate"
                     className="w-full h-auto max-h-[80vh] object-contain"
@@ -165,7 +166,7 @@ export function TimelineDemo() {
                 </button>
 
                 <div className="h-full flex justify-center items-center  ">
-                  <img
+                  <Image
                     src="/entegra.jpeg" // Path to your Entegra certificate image
                     alt="Entegra Certificate"
                     className="w-full h-auto max-h-[80vh] object-contain "

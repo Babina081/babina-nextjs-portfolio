@@ -202,7 +202,7 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-              <img
+              <Image
                 src={skill.image}
                 alt={skill.name}
                 style={{ width: "3rem", height: "3rem" }}
@@ -244,7 +244,7 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-              <img
+              <Image
                 src={skill.image}
                 alt={skill.name}
                 style={{ width: "2.5rem", height: "2.5rem" }}
@@ -287,7 +287,7 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-              <img
+              <Image
                 src={skill.image}
                 alt={skill.name}
                 style={{ width: "2rem", height: "2rem" }}
