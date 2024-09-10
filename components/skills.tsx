@@ -5,6 +5,7 @@ import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import SectionHeading from "./section-heading";
 import Image from "next/image";
+import { FollowerPointerCard } from "./ui/following-pointer";
 
 const fadeInAnimationsVariants = {
   initial: {
@@ -134,7 +135,7 @@ const Skills = () => {
 
   return (
     <section
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 scroll-mt-28 text-center sm:mb-40 max-w-5xl mx-auto"
       ref={skillRef}
       id="skills"
     >
@@ -142,6 +143,7 @@ const Skills = () => {
         What Skill I Am Equipped With
       </p>
       <SectionHeading>My Skills</SectionHeading>
+      {/* small devices */}
       <ul className="flex sm:hidden flex-wrap justify-center space-x-4 space-y-4 mt-12 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <li
@@ -163,12 +165,11 @@ const Skills = () => {
       <div
         style={{
           position: "relative",
-          width: "60vw",
           height: "60vh",
           minHeight: "30rem",
           minWidth: "30rem",
         }}
-        className="my-32  hidden sm:block"
+        className="sm:block hidden"
       >
         {/* Outer circle */}
         <ul
@@ -302,3 +303,9 @@ const Skills = () => {
 };
 
 export default Skills;
+
+const TitleComponent = ({ title }: { title: string }) => (
+  <div className="flex space-x-2 items-center">
+    <p>{title}</p>
+  </div>
+);
