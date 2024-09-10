@@ -1,6 +1,5 @@
 "use client";
 import { skillsData } from "@/lib/data"; // Assuming skillsData is an array of skills
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const PlaceItemInCircle = () => {
@@ -135,7 +134,7 @@ const PlaceItemInCircle = () => {
               placeItems: "center",
             }}
           >
-            <Image
+            <img
               src={skill.image}
               alt={skill.name}
               style={{ width: "3rem", height: "3rem" }}
@@ -178,7 +177,7 @@ const PlaceItemInCircle = () => {
               placeItems: "center",
             }}
           >
-            <Image
+            <img
               src={skill.image}
               alt={skill.name}
               style={{ width: "3rem", height: "3rem" }}
@@ -221,7 +220,7 @@ const PlaceItemInCircle = () => {
               placeItems: "center",
             }}
           >
-            <Image
+            <img
               src={skill.image}
               alt={skill.name}
               style={{ width: "3rem", height: "3rem" }}

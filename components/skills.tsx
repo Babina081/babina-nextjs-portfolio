@@ -2,9 +2,10 @@
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import SectionHeading from "./section-heading";
+import Image from "next/image";
+
 const fadeInAnimationsVariants = {
   initial: {
     opacity: 0,
@@ -202,7 +203,7 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-              <Image
+              <img
                 src={skill.image}
                 alt={skill.name}
                 style={{ width: "3rem", height: "3rem" }}
@@ -244,7 +245,7 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-              <Image
+              <img
                 src={skill.image}
                 alt={skill.name}
                 style={{ width: "2.5rem", height: "2.5rem" }}
@@ -287,7 +288,7 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-              <Image
+              <img
                 src={skill.image}
                 alt={skill.name}
                 style={{ width: "2rem", height: "2rem" }}
