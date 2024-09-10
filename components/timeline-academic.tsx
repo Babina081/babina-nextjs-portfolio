@@ -58,7 +58,7 @@ export function TimelineDemo() {
             colleagues further fueled my passion and desire to grow as a
             developer in the days to come.
           </p>
-          <div className="mt-5 text-right w-full">
+          <div className="mt-5 text-right w-full cursor-pointer">
             <div
               onClick={() => openModal("skybase")}
               className="text-blue-500 underline"
@@ -131,7 +131,7 @@ export function TimelineDemo() {
             things, both professionally and personally, which allowed me to
             enhance my writing and thinking abilities.
           </p>
-          <div className="mt-5 text-right w-full">
+          <div className="mt-5 text-right w-full cursor-pointer">
             <div
               onClick={() => openModal("entegra")}
               className="text-blue-500 underline"
