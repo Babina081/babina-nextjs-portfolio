@@ -19,7 +19,7 @@ export function TimelineDemo() {
     {
       title: "Present",
       content: (
-        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 pt-6 rounded-lg w-full">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 pt-6 rounded-lg w-full ">
           <div className="w-full flex items-center justify-center gap-2">
             <SectionHeading>In Search </SectionHeading>
             <div className="dot-container ">
@@ -34,7 +34,7 @@ export function TimelineDemo() {
     {
       title: "2024",
       content: (
-        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full ">
           <div className="w-full flex items-center justify-center">
             <SectionHeading>Front-End Developer - Intern</SectionHeading>
           </div>
@@ -107,7 +107,7 @@ export function TimelineDemo() {
     {
       title: "2023",
       content: (
-        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full ">
           <div className="w-full flex items-center justify-center">
             <SectionHeading>Technical Research Engineer</SectionHeading>
           </div>
@@ -180,7 +180,7 @@ export function TimelineDemo() {
     {
       title: "2022",
       content: (
-        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg w-full ">
           <div className="w-full flex items-center justify-center">
             <SectionHeading>Bachelor in Computer Engineering</SectionHeading>
           </div>
@@ -191,7 +191,7 @@ export function TimelineDemo() {
             <p className="italic">Affiliated: Pokhara University</p>
             <p className="text-lg underline">Phire, Pokhara</p>
           </div>
-          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10">
+          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10 mb-5">
             The real turning point in my academic journey was when I joined an
             engineering college to pursue computer engineering. My curiosity
             about the rapid advancements in technology pushed me towards this
@@ -207,18 +207,18 @@ export function TimelineDemo() {
     {
       title: "2017",
       content: (
-        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg ">
           <div className="w-full flex justify-center items-center">
             <SectionHeading>Higher Secondary (+2 Level)</SectionHeading>
           </div>
           <div className="w-full justify-end text-right">
-            <p className="text-xl text-red-400">
+            <p className="text-xl text-red-400 font-bold">
               St. Marys Higher Secondary School{" "}
             </p>
             <p className="italic">Affiliated: Government of Nepal</p>
             <p className="text-lg underline">Nayagaun, Pokhara</p>
           </div>
-          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10">
+          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10 mb-5">
             After completing my SLC, I decided to pursue my +2 in the science
             faculty, driven by a passion for the technical world. I knew early
             on that I wanted to dive deeper into this field, which is why I
@@ -234,16 +234,18 @@ export function TimelineDemo() {
     {
       title: "2015",
       content: (
-        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg">
+        <div className="shadow-md dark:shadow-white/10 flex flex-col items-start justify-start border border-blue-500/10 px-10 py-2 rounded-lg ">
           <div className="flex w-full justify-center items-center">
             <SectionHeading>School Leaving Certificate (SLC)</SectionHeading>
           </div>
           <div className="w-full justify-end text-right">
-            <p className="text-lg text-red-400">Gyanodaya Bal Batika School</p>
+            <p className="text-xl text-red-400 font-bold">
+              Gyanodaya Bal Batika School
+            </p>
             <p className="italic">Affiliated: Government of Nepal</p>
             <p className="text-lg underline">Sanepa, Lalitpur</p>
           </div>
-          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10">
+          <p className="tracking-tighter md:tracking-wider text-lg md:text-xl  mt-10 mb-5">
             Completing my SLC was a significant milestone in my academic life.
             Those years were filled with wonderful experiences, from learning
             new things every day to making lifelong friends. The teachers were

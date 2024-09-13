@@ -206,6 +206,7 @@ export const skillsData = [
   { name: "Postman", image: "/skill-images/postman.png" },
   { name: "Git", image: "/skill-images/git.png" },
   { name: "Jest", image: "/skill-images/jest.jpg" },
+  { name: "Vercel", image: "/skill-images/vercel.svg" },
 ] as const;
 
 export const academicData = [
