@@ -5,7 +5,6 @@ import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import SectionHeading from "./section-heading";
 import Image from "next/image";
-import { FollowerPointerCard } from "./ui/following-pointer";
 
 const fadeInAnimationsVariants = {
   initial: {
