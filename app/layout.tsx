@@ -10,7 +10,6 @@ import ThemeContextProvider from "@/context/theme-context";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
-import ReactGA from "react-ga";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +17,6 @@ export const metadata: Metadata = {
   title: "Babina | Personal Portfolio",
   description: "Babina Gurung is a fullstack developer",
 };
-
-const TRACKING_ID = "G-QLH6WCE1L3";
 
 export default function RootLayout({
   children,

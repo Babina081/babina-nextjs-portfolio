@@ -33,7 +33,6 @@
     "npm": "^10.8.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-ga": "^3.3.1",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.13.0",

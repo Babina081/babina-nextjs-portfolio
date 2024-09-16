@@ -16,7 +16,6 @@ import { useEffect, useRef } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { SparklesCore } from "./ui/sparkles";
-import ReactGA from "react-ga";
 
 const Intro = () => {
   const { theme } = useTheme();
@@ -84,10 +83,6 @@ const Intro = () => {
         duration: 0,
         delay: 0.8,
       });
-  }, []);
-
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
   }, []);
 
   return (
@@ -253,8 +248,8 @@ const Intro = () => {
           </Link>
           <a
             href="/CV.pdf"
-            rel="noreferrer"
-            aria-label="resume download"
+             rel="noreferrer"
+              aria-label="resume download"
             className="group btn-gradient-text px-7 py-3 items-center flex gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack  dark:text-black/80"
             target="_blank"
             download
