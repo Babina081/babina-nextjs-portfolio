@@ -206,6 +206,9 @@ export const skillsData = [
   { name: "Postman", image: "/skill-images/postman.png" },
   { name: "Git", image: "/skill-images/git.png" },
   { name: "Jest", image: "/skill-images/jest.jpg" },
+  { name: "ReactHook Form", image: "/skill-images/react-hook-form.svg" },
+  { name: "Zod", image: "/skill-images/zod.png" },
+  { name: "Tanstack", image: "/skill-images/tanstack.png" },
   { name: "Vercel", image: "/skill-images/vercel.svg" },
 ] as const;
 
