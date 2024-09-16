@@ -22,7 +22,7 @@ const fadeInAnimationsVariants = {
 
 const Skills = () => {
   const skillRef = useRef(null);
-  const { ref: sectionInViewRef } = useSectionInView("Skills", 0.75);
+  const { ref: sectionInViewRef } = useSectionInView("Skills");
 
   // Combine the refs using useEffect
   useEffect(() => {
