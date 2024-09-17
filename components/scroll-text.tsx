@@ -42,7 +42,7 @@ const ScrollText = () => {
             </span>
           </span>
           <span
-            className="bg-gradient-to-b from-black to-blue-600 dark:from-white dark:to-blue-300 text-transparent bg-clip-text font-extrabold text-3xl md:text-5xl "
+            className="textLight textDark font-extrabold text-3xl md:text-5xl "
             data-aos="zoom-in-down"
             data-aos-offset="200"
             data-aos-delay="50"
@@ -51,10 +51,10 @@ const ScrollText = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            Crafting Tomorrow's Code, Today.
+            Crafting Tomorrow&apos;s Code, Today.
           </span>
           <span
-            className="bg-gradient-to-b from-black to-blue-600 dark:from-white dark:to-blue-300 text-transparent bg-clip-text font-extrabold text-3xl md:text-5xl "
+            className="textLight textDark font-extrabold text-3xl md:text-5xl "
             data-aos="zoom-in-down"
             data-aos-offset="200"
             data-aos-delay="50"

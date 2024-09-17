@@ -113,7 +113,7 @@ const Intro = () => {
         <div className="flex items-center justify-center">
           <div className="relative">
             {/* <div className="chat-box sender">hello</div>
-            */}
+             */}
 
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
@@ -181,8 +181,6 @@ const Intro = () => {
                 }}
               ></motion.img> */}
 
-
-
               <Image
                 src={meImage}
                 alt=""
@@ -213,12 +211,12 @@ const Intro = () => {
           animate={{ opacity: 1, y: 0 }}
           className=" mt-2 px-4 font-medium !leading-[1.5] text-2xl sm:text-4xl relative z-10"
         >
-          <span className="font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text dark:from-white dark:to-blue-300">
+          <span className="font-bold tracking-tighter textLight  textDark">
             Hey! I'm{" "}
           </span>
         </motion.h1>
         <motion.h1
-          className="text-5xl lg:text-6xl xl:text-7xl font-sans pr-4 mb-10 tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text dark:from-white dark:to-blue-300 font-bold  relative z-10 "
+          className="text-5xl lg:text-6xl xl:text-7xl font-sans pr-4 mb-10 tracking-tighter textLight  textDark font-bold  relative z-10 "
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >

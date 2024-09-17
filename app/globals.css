@@ -42,6 +42,14 @@ html.dark {
   --audio-ping: #f3f8fe;
 }
 
+.textLight {
+  @apply bg-gradient-to-b from-black to-blue-600 text-transparent bg-clip-text;
+}
+
+.textDark {
+  @apply bg-gradient-to-b  text-transparent bg-clip-text dark:from-white dark:to-blue-300;
+}
+
 .borderBlack {
   @apply border border-black/10;
 }
@@ -117,7 +125,7 @@ html.dark {
 }
 
 .section-description {
-  @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E];
+  @apply text-center text-[22px] leading-[30px] tracking-tight;
 }
 
 .card {
