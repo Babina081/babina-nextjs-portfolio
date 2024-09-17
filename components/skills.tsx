@@ -288,9 +288,11 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-              <img
+              <Image
                 src={skill.image}
                 alt={skill.name}
+                width={50}
+                height={50}
                 style={{ width: "2rem", height: "2rem" }}
               />
             </li>
