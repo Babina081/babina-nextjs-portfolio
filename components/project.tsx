@@ -65,7 +65,12 @@ function Project({
           {" "}
           <FaGithub className="h-7 w-7 border rounded-full drop-shadow-md  bg-gradient-to-br dark:from-white dark:to-blue-500    cursor-pointer hover:scale-125 transition-all duration-200" />
         </Link>
-        <a href={demo} target="_blank" aria-label={`Play demo video ${title}`}>
+        <a
+          href={demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Play demo video for ${title}`}
+        >
           <FaRegCirclePlay className="h-7 w-7 border rounded-full drop-shadow-md  bg-gradient-to-br dark:from-white dark:to-blue-500  cursor-pointer hover:scale-125 transition-all duration-100" />
         </a>
       </div>
