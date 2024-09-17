@@ -35,17 +35,19 @@ function Project({
       }}
       className="group mb-3 sm:mb-8 last:mb-0 flex gap-2 sm:flex-row "
     >
-      <section className="order-1 sm:group-odd:order-2 bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem]  sm:group-odd:pl-8 hover:bg-gray-200 transition rounded-lg dark:bg-white/10 dark:hover:bg-white/20 dark:text-white  ">
+      <section className="order-1 sm:group-odd:order-2 bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem]  sm:group-odd:pl-8 hover:bg-gray-200 transition rounded-lg dark:bg-white/10 dark:hover:bg-white/20 dark:text-gray-100  ">
         <div className="pt-4 pb-7 px-5  sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-lg font-semibold">{title}</h3>
-          <p className="mt-2 text-sm leading-relaxed  text-gray-700 dark:text-white/70 tracking-tighter">
+          <h3 className="text-lg font-semibold text-black dark:text-white">
+            {title}
+          </h3>
+          <p className="mt-2 text-sm leading-relaxed  text-gray-700 dark:text-gray-200 tracking-tighter">
             {" "}
             {description}
           </p>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] py-1 px-3 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                className="bg-gray-900 py-1 px-3 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:bg-gray-400  dark:text-gray-800"
                 key={index}
               >
                 {tag}
@@ -63,7 +65,7 @@ function Project({
       <div className="flex flex-col gap-3 order-2 sm:group-odd:order-1">
         <Link href={gitpage} aria-label={`View code for ${title}`}>
           {" "}
-          <FaGithub className="h-7 w-7 border rounded-full drop-shadow-md  bg-gradient-to-br dark:from-white dark:to-blue-500    cursor-pointer hover:scale-125 transition-all duration-200" />
+          <FaGithub className="h-7 w-7 border rounded-full drop-shadow-md  bg-gradient-to-br dark:from-gray-100 dark:to-blue-500    cursor-pointer hover:scale-125 transition-all duration-200" />
         </Link>
         <Link
           href={demo}
@@ -71,7 +73,7 @@ function Project({
           rel="noopener noreferrer"
           aria-label={`Play demo video for ${title}`}
         >
-          <FaRegCirclePlay className="h-7 w-7 border rounded-full drop-shadow-md  bg-gradient-to-br dark:from-white dark:to-blue-500  cursor-pointer hover:scale-125 transition-all duration-100" />
+          <FaRegCirclePlay className="h-7 w-7 border rounded-full drop-shadow-md  bg-gradient-to-br dark:from-gray-100 dark:to-blue-500  cursor-pointer hover:scale-125 transition-all duration-100" />
         </Link>
       </div>
     </motion.div>
