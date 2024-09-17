@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 import { toast } from "react-hot-toast";
 import SectionHeading from "./section-heading";
 import SubmitBtn from "./submit-btn";
+import SubHeading from "./sub-heading";
 
 const Contact = () => {
   const contactRef = useRef(null);
@@ -39,9 +40,7 @@ const Contact = () => {
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center max-w-[53rem] scroll-mt-28"
       id="contact"
     >
-      <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
-        Let&apos;s Initiate our Converstion
-      </p>
+      <SubHeading>Let&apos;s Initiate our Converstion</SubHeading>
       <SectionHeading>Contact Me</SectionHeading>
 
       <form

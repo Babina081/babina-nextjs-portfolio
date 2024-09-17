@@ -5,6 +5,7 @@ import { useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import SectionHeading from "./section-heading";
+import SubHeading from "./sub-heading";
 
 const Skills = () => {
   const skillRef = useRef(null);
@@ -124,9 +125,7 @@ const Skills = () => {
       ref={skillRef}
       id="skills"
     >
-      <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300 dark:text-transparent bg-clip-text ">
-        What Skill I Am Equipped With
-      </p>
+      <SubHeading>What Skill I Am Equipped With</SubHeading>
       <SectionHeading>My Skills</SectionHeading>
       {/* small devices */}
       <ul className="flex sm:hidden flex-wrap justify-center space-x-4 space-y-4 mt-12 text-lg text-gray-800">

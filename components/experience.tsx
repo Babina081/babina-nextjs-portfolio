@@ -8,6 +8,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import SectionHeading from "./section-heading";
+import SubHeading from "./sub-heading";
 
 const Experience = () => {
   const { ref } = useSectionInView("Qualifications", 0.5);
@@ -15,9 +16,7 @@ const Experience = () => {
 
   return (
     <section ref={ref} className="mb-28 scroll-mt-28 sm:mb-40 " id="experience">
-      <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
-        Checkout my work real world experience
-      </p>
+      <SubHeading>Checkout my work real world experience</SubHeading>
       <SectionHeading>My Work Experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((experience, index) => (

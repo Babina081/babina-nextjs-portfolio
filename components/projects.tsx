@@ -4,6 +4,7 @@ import { useSectionInView } from "@/lib/hooks";
 import React, { useEffect, useRef } from "react";
 import Project from "./project";
 import SectionHeading from "./section-heading";
+import SubHeading from "./sub-heading";
 
 const Projects = () => {
   const projectRef = useRef(null);
@@ -17,9 +18,7 @@ const Projects = () => {
 
   return (
     <section ref={projectRef} className="scroll-mt-28 mb-28 " id="projects">
-      <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
-        Works Recently Accomplished By Me
-      </p>
+      <SubHeading>Works Recently Accomplished By Me</SubHeading>
       <SectionHeading>My Projects</SectionHeading>
 
       <div className="grid md:grid-cols-2 gap-4">

@@ -5,6 +5,7 @@ import tubeImage from "@/public/tube.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 import SectionHeading from "./section-heading";
+import SubHeading from "./sub-heading";
 const About = () => {
   const aboutRef = useRef(null);
   const { ref: sectionInViewRef } = useSectionInView("About", 0.25);
@@ -30,9 +31,7 @@ const About = () => {
       className="mb-28 max-w-[45rem] text-justify leading-8 sm:mb-40 scroll-mt-28 relative"
       id="about"
     >
-      <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
-        Get To Know
-      </p>
+      <SubHeading>Get To Know</SubHeading>
       <SectionHeading>About Me</SectionHeading>
       <div className="relative">
         <motion.img
