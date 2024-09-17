@@ -51,7 +51,7 @@ const Header = () => {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
       <nav className="flex fixed top-[0.6rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0 ">
-        <ul className="flex w-[30rem] flex-wrap items-center justify-center gap-y-1 text-[1.2rem] sm:text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap gap-3 sm:gap-2 relative ">
+        <ul className="flex w-[30rem] flex-wrap items-center justify-center gap-y-1 text-[1.2rem] sm:text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-2 relative ">
           {links.map((link) => (
             <motion.li
               key={link.hash}
