@@ -139,6 +139,7 @@ const Header = () => {
             >
               <Link
                 href={link.hash}
+                aria-label={`Go to ${link.name}`}
                 className={clsx(
                   `flex w-full items-center justify-center px-3 py-3 transition dark:text-gray-500 hover:scale-110`,
                   {
