@@ -131,7 +131,7 @@ const Header = () => {
       </nav>
       {/* Audio element */}
       <div>
-        <audio ref={audioRef} src="/bg-audio3.mp3" loop />
+        <audio ref={audioRef} src="/bg-audio2.mp3" loop />
       </div>
     </header>
   );
