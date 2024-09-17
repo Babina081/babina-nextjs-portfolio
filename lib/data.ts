@@ -198,7 +198,6 @@ export const skillsData = [
   { name: "Next.js", image: "/skill-images/nextjs.png" },
   { name: "Tailwind", image: "/skill-images/tailwind.png" },
   { name: "Sass", image: "/skill-images/sass.png" },
-  // { name: "Prisma", image: "/skill-images/prisma.png" },
   { name: "Node.js", image: "/skill-images/nodejs.png" },
   { name: "Express", image: "/skill-images/express-js.png" },
   { name: "MongoDB", image: "/skill-images/mongo.png" },
@@ -210,6 +209,7 @@ export const skillsData = [
   { name: "ReactHook Form", image: "/skill-images/react-hook-form.svg" },
   { name: "Zod", image: "/skill-images/zod.png" },
   { name: "Tanstack", image: "/skill-images/tanstack.png" },
+  { name: "Prisma", image: "/skill-images/prisma.png" },
   { name: "Vercel", image: "/skill-images/vercel.svg" },
 ] as const;
 
