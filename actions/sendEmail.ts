@@ -1,8 +1,8 @@
 "use server";
-import { getErrorMessage, validateString } from "@/lib/utils";
-import { Resend } from "resend";
 import ContactFormEmail from "@/email/contact-form-email";
+import { getErrorMessage, validateString } from "@/lib/utils";
 import React from "react";
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

@@ -2,9 +2,9 @@
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import SectionHeading from "./section-heading";
-import Image from "next/image";
 
 const fadeInAnimationsVariants = {
   initial: {

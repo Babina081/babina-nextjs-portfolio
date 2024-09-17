@@ -3,9 +3,9 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import { links } from "@/lib/data";
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import { Elastic, gsap, Power4 } from "gsap";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { Elastic, gsap, Power4 } from "gsap";
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =

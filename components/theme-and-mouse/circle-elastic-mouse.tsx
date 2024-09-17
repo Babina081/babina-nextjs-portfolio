@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const CircleElasticMouse = () => {
   const circleRef = useRef<HTMLDivElement | null>(null);

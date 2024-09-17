@@ -2,11 +2,7 @@
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTheme } from "@/context/theme-context";
 import { useSectionInView } from "@/lib/hooks";
-import img1 from "@/public/intro1.png";
-import img2 from "@/public/intro2.png";
-import img3 from "@/public/intro3.png";
 import meImage from "@/public/me.jpg";
-import starImage from "@/public/star.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
