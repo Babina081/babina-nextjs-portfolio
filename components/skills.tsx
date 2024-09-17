@@ -6,20 +6,6 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import SectionHeading from "./section-heading";
 
-const fadeInAnimationsVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
-
 const Skills = () => {
   const skillRef = useRef(null);
   const { ref: sectionInViewRef } = useSectionInView("Skills");
@@ -203,7 +189,7 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-             <Image
+              <Image
                 src={skill.image}
                 alt={skill.name}
                 width={50}
@@ -248,10 +234,13 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-              <img
+              <Image
                 src={skill.image}
                 alt={skill.name}
-                style={{ width: "2.5rem", height: "2.5rem" }}
+                width={50}
+                height={50}
+                style={{ height: "auto" }} // Adjust height or width, and let the other scale naturally
+                layout="intrinsic"
               />
             </li>
           ))}
@@ -308,9 +297,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-const TitleComponent = ({ title }: { title: string }) => (
-  <div className="flex space-x-2 items-center">
-    <p>{title}</p>
-  </div>
-);
