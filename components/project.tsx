@@ -61,7 +61,7 @@ function Project({
         ></Image>
       </section>
       <div className="flex flex-col gap-3 order-2 sm:group-odd:order-1">
-        <Link href={gitpage} className="">
+        <Link href={gitpage} aria-label={`View code for ${title}`}>
           {" "}
           <FaGithub className="h-7 w-7 border rounded-full drop-shadow-md  bg-gradient-to-br dark:from-white dark:to-blue-500    cursor-pointer hover:scale-125 transition-all duration-200" />
         </Link>
