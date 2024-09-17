@@ -137,7 +137,7 @@ const Skills = () => {
           >
             <Image
               src={skill.image}
-              alt={skill.name}
+              alt={`Icon for ${skill.name} skill`}
               quality={95}
               width={50}
               height={50}
@@ -191,7 +191,7 @@ const Skills = () => {
             >
               <Image
                 src={skill.image}
-                alt={skill.name}
+                alt={`Icon for ${skill.name} skill`}
                 width={50}
                 height={50}
                 style={{ height: "auto" }} // Adjust height or width, and let the other scale naturally
@@ -236,7 +236,7 @@ const Skills = () => {
             >
               <Image
                 src={skill.image}
-                alt={skill.name}
+                alt={`Icon for ${skill.name} skill`}
                 width={50}
                 height={50}
                 style={{ height: "auto" }} // Adjust height or width, and let the other scale naturally
@@ -282,7 +282,7 @@ const Skills = () => {
             >
               <Image
                 src={skill.image}
-                alt={skill.name}
+                alt={`Icon for ${skill.name} skill`}
                 width={50}
                 height={50}
                 style={{ height: "auto" }} // Adjust height or width, and let the other scale naturally
