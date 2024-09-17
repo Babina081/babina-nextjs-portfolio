@@ -99,16 +99,16 @@ const Header = () => {
           {links.map((link) => (
             <motion.li
               key={link.hash}
-              className="h-3/4 hidden sm:flex items-center justify-center relative hover:underline hover:text-gray-950 dark:hover:text-gray-200 hover:scale-105"
+              className="h-3/4 hidden sm:flex items-center justify-center relative hover:underline hover:text-gray-950 dark:hover:text-gray-500 "
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
                 href={link.hash}
                 className={clsx(
-                  `flex w-full items-center justify-center px-3 py-3 transition dark:text-gray-500`,
+                  `flex w-full items-center justify-center px-3 py-3 transition dark:text-gray-500 hover:scale-110`,
                   {
-                    "bg-gradient-to-t from-blue-500 dark:from-blue-300 dark:to-white  rounded-full   text-gray-950 dark:text-gray-200 ":
+                    "bg-gradient-to-t from-blue-500 dark:from-blue-300 dark:to-white  rounded-full   text-gray-950 dark:text-gray-500 ":
                       activeSection === link.name,
                   }
                 )}
@@ -120,7 +120,7 @@ const Header = () => {
                 {link.name}
                 {link.name === activeSection && (
                   <motion.span
-                    className="absolute inset-0 -z-10"
+                    className=" absolute inset-0 -z-10 "
                     layoutId="activeSection"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   ></motion.span>
@@ -140,7 +140,7 @@ const Header = () => {
               <Link
                 href={link.hash}
                 className={clsx(
-                  `flex w-full items-center justify-center px-3 py-3 transition dark:text-gray-500`,
+                  `flex w-full items-center justify-center px-3 py-3 transition dark:text-gray-500 hover:scale-110`,
                   {
                     // Apply hover effect only if the section is not active
                     "hover:bg-gradient-to-t from-blue-500  hover:rounded-full dark:from-blue-300 dark:to-white dark:hover:text-gray-500 hover:text-gray-950 ":
