@@ -288,13 +288,14 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-              <Image
-                src={skill.image}
-                alt={skill.name}
-                width={50}
-                height={50}
-                style={{ width: "2rem", height: "2rem" }}
-              />
+             <Image
+  src={skill.image}
+  alt={skill.name}
+  width={50}
+  height={50}
+  style={{ width: "auto", height: "2rem" }} // Adjust height or width, and let the other scale naturally
+  layout="intrinsic"
+/>
             </li>
           ))}
         </ul>
