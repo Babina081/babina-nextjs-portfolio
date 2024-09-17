@@ -17,6 +17,7 @@ import {
   FaUserGraduate,
 } from "react-icons/fa";
 import { FaMessage, FaPhone } from "react-icons/fa6";
+import { HiLightBulb } from "react-icons/hi";
 import { IoMdMail } from "react-icons/io";
 import { PiMedalFill } from "react-icons/pi";
 
@@ -39,7 +40,7 @@ export const links = [
   {
     name: "Skills",
     hash: "#skills",
-    icon: React.createElement(PiMedalFill),
+    icon: React.createElement(HiLightBulb),
   },
   // {
   //   name: "Experience",
@@ -54,7 +55,7 @@ export const links = [
   {
     name: "Achievement",
     hash: "#achievement",
-    icon: React.createElement(FaUserGraduate),
+    icon: React.createElement(PiMedalFill),
   },
   {
     name: "Contact",

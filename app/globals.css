@@ -9,6 +9,7 @@
   --spinner-border-color: #001e80;
   --circle-background: black;
   --dots-color: #001e80;
+  --audio-ping: #d18181;
 }
 
 * {
@@ -38,6 +39,7 @@ html.dark {
   --spinner-border-color: white;
   --circle-background: white;
   --dots-color: white;
+  --audio-ping: #f3f8fe;
 }
 
 .borderBlack {
@@ -557,4 +559,108 @@ html.dark {
 
 .dot:nth-child(3) {
   animation-delay: 0.6s;
+}
+
+/* audio ping */
+
+.box {
+  height: 10px;
+  width: 10px;
+  background: var(--audio-ping);
+  border-radius: 50%;
+  position: relative;
+}
+
+.box::after {
+  content: "";
+  height: 5px;
+  width: 5px;
+  background: var(--audio-ping);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  opacity: 0;
+  animation: myAnimation 800ms linear infinite;
+}
+
+@keyframes myAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(10);
+  }
+}
+
+.chat-box {
+  position: relative;
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  width: fit-content;
+  max-width: 80%;
+}
+
+.sender {
+  justify-content: flex-end;
+}
+
+.chat-box.sender {
+  background-color: #d18181;
+  align-self: flex-end;
+}
+
+.chat-box.receiver {
+  background-color: #f70776;
+  align-self: flex-start;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box.sender::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  right: -15px;
+  width: 15px;
+  height: 20px;
+  z-index: 9;
+  border-radius: 0 0 0 20px;
+  background: #fff;
+}
+.chat-box.sender::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -9px;
+  width: 18px;
+  height: 15px;
+  background: #d18181;
+}
+
+.chat-box.receiver::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+  width: 15px;
+  height: 20px;
+  z-index: 9;
+  border-radius: 0 0 20px 0;
+  background: #fff;
+}
+.chat-box.receiver::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f70776;
 }
