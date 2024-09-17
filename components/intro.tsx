@@ -17,6 +17,12 @@ import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { SparklesCore } from "./ui/sparkles";
 
+const Pointer = () => {
+  return (
+    <BsArrowRight size={30} className="text-gray-500 dark:text-gray-400" />
+  );
+};
+
 const Intro = () => {
   const { theme } = useTheme();
   const introRef = useRef(null);
@@ -41,7 +47,12 @@ const Intro = () => {
   useEffect(() => {
     gsap.registerPlugin(TextPlugin);
 
-    const words = ["Web Developer ", "React Developer ", "Nextjs Developer"];
+    const words = [
+      "Web Developer ",
+      "React Developer ",
+      "Nextjs Developer",
+      "Frontend Developer",
+    ];
     let mainTimeline = gsap.timeline({
       repeat: -1,
     });
@@ -105,12 +116,15 @@ const Intro = () => {
         </div>
         <div className="flex items-center justify-center">
           <div className="relative">
+            {/* <div className="chat-box sender">hello</div>
+            */}
+
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ type: "tween", duration: 0.8 }}
             >
-              <motion.img
+              {/* <motion.img
                 src={img1.src}
                 alt="cylinder Image"
                 width={300}
@@ -169,14 +183,16 @@ const Intro = () => {
                   repeatType: "loop",
                   ease: "easeInOut",
                 }}
-              ></motion.img>
+              ></motion.img> */}
+
+
 
               <Image
                 src={meImage}
                 alt=""
                 width={192}
                 height={192}
-                className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl "
+                className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl shadow-neutral-600 dark:shadow-[#5e3f45]  box-border"
                 quality={95}
                 priority={true}
               ></Image>
@@ -248,8 +264,8 @@ const Intro = () => {
           </Link>
           <a
             href="/CV.pdf"
-             rel="noreferrer"
-              aria-label="resume download"
+            rel="noreferrer"
+            aria-label="resume download"
             className="group btn-gradient-text px-7 py-3 items-center flex gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack  dark:text-black/80"
             target="_blank"
             download
