@@ -203,10 +203,13 @@ const Skills = () => {
                 placeItems: "center",
               }}
             >
-              <img
+             <Image
                 src={skill.image}
                 alt={skill.name}
-                style={{ width: "3rem", height: "3rem" }}
+                width={50}
+                height={50}
+                style={{ height: "auto" }} // Adjust height or width, and let the other scale naturally
+                layout="intrinsic"
               />
             </li>
           ))}
