@@ -95,7 +95,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "Javascript", "Tailwind", "Redux Toolkit"],
     imageUrl: skygyan,
     gitpage: "https://github.com/skybaseinnovations/skygyan-next",
-    demo: "http://localhost:3000/home/explore",
+    demo: "https://garde-calculator.vercel.app/",
   },
   {
     title: "College Grade Calculator",
