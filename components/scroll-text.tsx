@@ -8,7 +8,7 @@ import { useEffect } from "react";
 const ScrollText = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 500,
       easing: "ease-in-out",
       mirror: true,
     });
@@ -20,7 +20,7 @@ const ScrollText = () => {
           <span className=" mb-10 flex justify-between w-full mx-auto ">
             <span
               data-aos="fade-right"
-              data-aos-offset="300"
+              data-aos-offset="200"
               data-aos-delay="100"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
@@ -31,7 +31,7 @@ const ScrollText = () => {
             </span>
             <span
               data-aos="fade-left"
-              data-aos-offset="300"
+              data-aos-offset="200"
               data-aos-delay="50"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
@@ -44,7 +44,7 @@ const ScrollText = () => {
           <span
             className="bg-gradient-to-b from-black to-blue-600 dark:from-white dark:to-blue-300 text-transparent bg-clip-text font-extrabold text-3xl md:text-5xl "
             data-aos="zoom-in-down"
-            data-aos-offset="300"
+            data-aos-offset="200"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
@@ -56,7 +56,7 @@ const ScrollText = () => {
           <span
             className="bg-gradient-to-b from-black to-blue-600 dark:from-white dark:to-blue-300 text-transparent bg-clip-text font-extrabold text-3xl md:text-5xl "
             data-aos="zoom-in-down"
-            data-aos-offset="300"
+            data-aos-offset="200"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
