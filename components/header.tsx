@@ -12,7 +12,7 @@ const Header = () => {
     useActiveSectionContext();
   // State to track if the audio is playing or not
   const [isPlaying, setIsPlaying] = useState(true);
-  const magnetoRef = useRef<HTMLButtonElement>(null);
+  const magnetoRef = useRef<HTMLLIElement>(null);
   const magnetoTextRef = useRef<HTMLSpanElement>(null);
 
   // Ref to store the audio element, with correct typing
@@ -166,19 +166,19 @@ const Header = () => {
             </motion.li>
           ))}
 
-          <button
+          <li
             className=" h-12 w-12 p-2 sm:absolute  sm:-right-20 rounded-full hidden sm:flex items-center justify-center cursor-pointer border-white border-opacity-40  bg-white bg-opacity-80  shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
             onClick={toggleAudio}
             ref={magnetoRef}
           >
             <span className="box" ref={magnetoTextRef}></span>
-          </button>
-          <button
+          </li>
+          <li
             className=" h-12 w-12 p-2 sm:absolute  sm:-right-20 rounded-full flex sm:hidden items-center justify-center cursor-pointer border-white border-opacity-40  bg-white bg-opacity-80  shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
             onClick={toggleAudio}
           >
             <span className="box"></span>
-          </button>
+          </li>
         </ul>
       </nav>
       {/* Audio element */}
