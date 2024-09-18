@@ -16,7 +16,7 @@
     "@react-three/drei": "^9.107.0",
     "@react-three/fiber": "^8.16.8",
     "@studio-freight/lenis": "^1.0.42",
-    "@tabler/icons-react": "^3.14.0",
+    "@tabler/icons-react": "^3.17.0",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
