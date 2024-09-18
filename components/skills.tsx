@@ -153,7 +153,7 @@ const Skills = () => {
           minHeight: "30rem",
           minWidth: "30rem",
         }}
-        className="sm:block hidden"
+        className="sm:block hidden my-20"
       >
         {/* Outer circle */}
         <ul
