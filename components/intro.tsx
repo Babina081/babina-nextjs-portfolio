@@ -13,12 +13,6 @@ import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { SparklesCore } from "./ui/sparkles";
 
-const Pointer = () => {
-  return (
-    <BsArrowRight size={30} className="text-gray-500 dark:text-gray-400" />
-  );
-};
-
 const Intro = () => {
   const { theme } = useTheme();
   const introRef = useRef(null);

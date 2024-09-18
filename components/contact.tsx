@@ -37,7 +37,7 @@ const Contact = () => {
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center max-w-[53rem] scroll-mt-28"
+      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center max-w-3xl scroll-mt-28"
       id="contact"
     >
       <SubHeading>Let&apos;s Initiate our Converstion</SubHeading>

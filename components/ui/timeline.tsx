@@ -41,9 +41,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
+    <section
       ref={containerRef}
-      className="w-full  font-sans md:px-10 scroll-mt-28 mb-40 "
+      className="w-full  font-sans md:px-10 scroll-mt-28 mb-40 max-w-7xl mx-auto"
       id="academic"
     >
       <p className="section-description bg-gradient-to-b dark:from-white dark:to-blue-300   dark:text-transparent bg-clip-text ">
@@ -89,6 +89,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

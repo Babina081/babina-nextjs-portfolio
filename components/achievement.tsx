@@ -19,7 +19,7 @@ const Achievement = () => {
 
   return (
     <section
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-3xl scroll-mt-28 text-center sm:mb-40"
       ref={achievementRef}
       id="achievement"
     >
