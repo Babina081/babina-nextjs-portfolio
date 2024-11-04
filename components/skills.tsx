@@ -105,7 +105,7 @@ const Skills = () => {
       ref={skillRef}
       id="skills"
     >
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#111827] bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)] z-10"></div>
+      <div className="hidden lg:flex absolute pointer-events-none inset-0 items-center justify-center dark:bg-[#111827] bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)] z-10"></div>
       <SubHeading>What Skill I Am Equipped With</SubHeading>
       <SectionHeading>My Skills</SectionHeading>
       {/* small devices */}
