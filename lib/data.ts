@@ -21,6 +21,10 @@ import { HiLightBulb } from "react-icons/hi";
 import { IoMdMail } from "react-icons/io";
 import { PiMedalFill } from "react-icons/pi";
 
+import udemy from "@/public/certificates/udemy.png";
+import reactnative from "@/public/certificates/reactnative.png";
+import uniathena from "@/public/certificates/uniathena.png";
+
 export const links = [
   {
     name: "Home",
@@ -285,5 +289,35 @@ export const contactDetails = [
     name: "Phone",
     icon: React.createElement(FaPhone),
     detail: "+977 9812345678",
+  },
+] as const;
+
+export const achievementsData = [
+  {
+    id: 1,
+    title: "The Complete 2024 Web Development Bootcamp",
+    provider: "Udemy",
+    instructor: "Dr. Angela Yu",
+    certificateUrl:
+      "https://www.udemy.com/certificate/UC-a4453e3d-657e-427b-9ae8-722eb3bf8b74/",
+    image: udemy,
+  },
+  {
+    id: 2,
+    title: "React Native",
+    provider: "Coursera",
+    instructor: "Meta Staff Instructor",
+    certificateUrl:
+      "https://www.coursera.org/account/accomplishments/certificate/Z3M7EXA1NHBD",
+    image: reactnative,
+  },
+  {
+    id: 3,
+    title: "User Research – A Key Pillar of UI/UX Design!",
+    provider: "UniAthena",
+    instructor: "Pooja Dubey",
+    certificateUrl:
+      "/certificates/uniathena.pdf",
+    image: uniathena,
   },
 ] as const;

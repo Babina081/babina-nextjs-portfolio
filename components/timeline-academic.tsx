@@ -93,7 +93,7 @@ export function TimelineDemo() {
 
                 <div className="w-full h-full flex justify-center items-center">
                   <img
-                    src="/skybase.jpeg" // Path to your Skybase certificate image
+                    src="/certificates/skybase.jpeg" // Path to your Skybase certificate image
                     alt="Skybase Certificate"
                     className="w-full h-auto max-h-[80vh] object-contain"
                   />
@@ -166,7 +166,7 @@ export function TimelineDemo() {
 
                 <div className="h-full flex justify-center items-center  ">
                   <img
-                    src="/entegra.jpeg" // Path to your Entegra certificate image
+                    src="/certificates/entegra.jpeg" // Path to your Entegra certificate image
                     alt="Entegra Certificate"
                     className="w-full h-auto max-h-[80vh] object-contain "
                   />

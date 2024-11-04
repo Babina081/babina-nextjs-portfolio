@@ -2,7 +2,7 @@
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTheme } from "@/context/theme-context";
 import { useSectionInView } from "@/lib/hooks";
-import meImage from "@/public/me.jpg";
+import meImage from "@/public/me/me.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -251,7 +251,7 @@ const Intro = () => {
             <BsArrowRight className="opacity-75 group-hover:translate-x-1 transition"></BsArrowRight>
           </Link>
           <a
-            href="/CV.pdf"
+            href="/me/CV.pdf"
             rel="noreferrer"
             aria-label="resume download"
             className="group btn-gradient-text px-7 py-3 items-center flex gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack  dark:text-black/80"
