@@ -12,7 +12,6 @@ interface Skill {
   image: string;
 }
 
-
 const Skills = () => {
   const skillRef = useRef<HTMLDivElement | null>(null);
   const { ref: sectionInViewRef } = useSectionInView("Skills");
@@ -60,7 +59,9 @@ const Skills = () => {
 
         circles.forEach((circle, i) => {
           if (circle) {
-            const transform = `rotate(${i * rotation}deg) translate(${radius}px) rotate(-${i * rotation}deg)`;
+            const transform = `rotate(${
+              i * rotation
+            }deg) translate(${radius}px) rotate(-${i * rotation}deg)`;
             circle.style.transform = transform;
           }
         });
@@ -86,20 +87,29 @@ const Skills = () => {
   }, []);
 
   const outerCircleData = skillsData.slice(0, Math.ceil(skillsData.length / 4));
-  const middleCircleData = skillsData.slice(Math.ceil(skillsData.length / 4), Math.ceil((skillsData.length * 2) / 4));
-  const innerCircleData = skillsData.slice(Math.ceil((skillsData.length * 2) / 4), Math.ceil((skillsData.length * 3) / 4));
-  const fourthCircleData = skillsData.slice(Math.ceil((skillsData.length * 3) / 4));
-  
+  const middleCircleData = skillsData.slice(
+    Math.ceil(skillsData.length / 4),
+    Math.ceil((skillsData.length * 2) / 4)
+  );
+  const innerCircleData = skillsData.slice(
+    Math.ceil((skillsData.length * 2) / 4),
+    Math.ceil((skillsData.length * 3) / 4)
+  );
+  const fourthCircleData = skillsData.slice(
+    Math.ceil((skillsData.length * 3) / 4)
+  );
+
   return (
     <section
-      className="mb-28 scroll-mt-28 text-center sm:mb-40 max-w-3xl mx-auto"
+      className="mb-28 py-10 scroll-mt-28 text-center sm:mb-40  mx-auto w-full dark:bg-transparent bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative "
       ref={skillRef}
       id="skills"
     >
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#111827] bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)] z-10"></div>
       <SubHeading>What Skill I Am Equipped With</SubHeading>
       <SectionHeading>My Skills</SectionHeading>
       {/* small devices */}
-      <ul className="flex sm:hidden flex-wrap justify-center space-x-4 space-y-4 mt-12 text-lg text-gray-800">
+      <ul className="flex sm:hidden flex-wrap justify-center space-x-4 space-y-4 mt-12 text-lg text-gray-800 max-w-3xl">
         {skillsData.map((skill, index) => (
           <li
             key={index}
@@ -140,10 +150,30 @@ const Skills = () => {
         </div>
         {/* Circle containers */}
         {[
-          { ref: outerContainerRef, data: outerCircleData, size: "30rem", circleRefs: outerCircleRefs },
-          { ref: middleContainerRef, data: middleCircleData, size: "20rem", circleRefs: middleCircleRefs },
-          { ref: innerContainerRef, data: innerCircleData, size: "10rem", circleRefs: innerCircleRefs },
-          { ref: fourthContainerRef, data: fourthCircleData, size: "40rem", circleRefs: fourthCircleRefs },
+          {
+            ref: outerContainerRef,
+            data: outerCircleData,
+            size: "30rem",
+            circleRefs: outerCircleRefs,
+          },
+          {
+            ref: middleContainerRef,
+            data: middleCircleData,
+            size: "20rem",
+            circleRefs: middleCircleRefs,
+          },
+          {
+            ref: innerContainerRef,
+            data: innerCircleData,
+            size: "10rem",
+            circleRefs: innerCircleRefs,
+          },
+          {
+            ref: fourthContainerRef,
+            data: fourthCircleData,
+            size: "40rem",
+            circleRefs: fourthCircleRefs,
+          },
         ].map(({ ref, data, size, circleRefs }, index) => (
           <ul
             key={index}
