@@ -7,13 +7,18 @@ import { useEffect, useRef, useState } from "react";
 import SectionHeading from "./section-heading";
 import SubHeading from "./sub-heading";
 
+interface Skill {
+  name: string;
+  image: string;
+}
+
+
 const Skills = () => {
-  const skillRef = useRef(null);
+  const skillRef = useRef<HTMLDivElement | null>(null);
   const { ref: sectionInViewRef } = useSectionInView("Skills");
 
-  // Combine the refs using useEffect
   useEffect(() => {
-    if (sectionInViewRef) {
+    if (sectionInViewRef && skillRef.current) {
       sectionInViewRef(skillRef.current);
     }
   }, [sectionInViewRef]);
@@ -27,98 +32,64 @@ const Skills = () => {
   const outerContainerRef = useRef<HTMLUListElement | null>(null);
   const middleContainerRef = useRef<HTMLUListElement | null>(null);
   const innerContainerRef = useRef<HTMLUListElement | null>(null);
+  const fourthContainerRef = useRef<HTMLUListElement | null>(null);
+
   const outerCircleRefs = useRef<(HTMLLIElement | null)[]>([]);
   const middleCircleRefs = useRef<(HTMLLIElement | null)[]>([]);
   const innerCircleRefs = useRef<(HTMLLIElement | null)[]>([]);
-  const [rotationAngle, setRotationAngle] = useState<number>(0); // Track rotation angle
+  const fourthCircleRefs = useRef<(HTMLLIElement | null)[]>([]);
+
+  const [rotationAngle, setRotationAngle] = useState(0);
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   useEffect(() => {
-    const outerContainer = outerContainerRef.current;
-    const middleContainer = middleContainerRef.current;
-    const innerContainer = innerContainerRef.current;
-    const outerCircles = outerCircleRefs.current;
-    const middleCircles = middleCircleRefs.current;
-    const innerCircles = innerCircleRefs.current;
+    const setupCircularLayout = () => {
+      const containers = [
+        { ref: outerContainerRef, circles: outerCircleRefs.current },
+        { ref: middleContainerRef, circles: middleCircleRefs.current },
+        { ref: innerContainerRef, circles: innerCircleRefs.current },
+        { ref: fourthContainerRef, circles: fourthCircleRefs.current },
+      ];
 
-    if (
-      !outerContainer ||
-      !middleContainer ||
-      !innerContainer ||
-      !outerCircles.length ||
-      !middleCircles.length ||
-      !innerCircles.length
-    )
-      return;
+      containers.forEach(({ ref, circles }) => {
+        const container = ref.current;
+        if (!container || !circles.length) return;
 
-    const outerRadius = outerContainer.offsetWidth / 2;
-    const middleRadius = middleContainer.offsetWidth / 2;
-    const innerRadius = innerContainer.offsetWidth / 2;
-    const outerRotation = 360 / outerCircles.length;
-    const middleRotation = 360 / middleCircles.length;
-    const innerRotation = 360 / innerCircles.length;
+        const radius = container.offsetWidth / 2;
+        const rotation = 360 / circles.length;
 
-    const circular = () => {
-      // Outer circle
-      outerCircles.forEach((circle, i) => {
-        if (circle) {
-          const value = `rotate(${
-            i * outerRotation
-          }deg) translate(${outerRadius}px) rotate(-${i * outerRotation}deg)`;
-          circle.style.transform = value;
-        }
-      });
-
-      // Middle circle
-      middleCircles.forEach((circle, i) => {
-        if (circle) {
-          const value = `rotate(${
-            i * middleRotation
-          }deg) translate(${middleRadius}px) rotate(-${i * middleRotation}deg)`;
-          circle.style.transform = value;
-        }
-      });
-
-      // Inner circle
-      innerCircles.forEach((circle, i) => {
-        if (circle) {
-          const value = `rotate(${
-            i * innerRotation
-          }deg) translate(${innerRadius}px) rotate(-${i * innerRotation}deg)`;
-          circle.style.transform = value;
-        }
+        circles.forEach((circle, i) => {
+          if (circle) {
+            const transform = `rotate(${i * rotation}deg) translate(${radius}px) rotate(-${i * rotation}deg)`;
+            circle.style.transform = transform;
+          }
+        });
       });
     };
 
-    circular();
-    window.addEventListener("resize", circular);
+    setupCircularLayout();
+    window.addEventListener("resize", setupCircularLayout);
 
     return () => {
-      window.removeEventListener("resize", circular);
+      window.removeEventListener("resize", setupCircularLayout);
     };
   }, []);
 
   useEffect(() => {
     const animateRotation = () => {
-      setRotationAngle((prev) => prev + 0.2); // Adjust the speed by changing the increment value
+      setRotationAngle((prev) => prev + 0.2);
       requestAnimationFrame(animateRotation);
     };
 
     const animationId = requestAnimationFrame(animateRotation);
-
-    return () => {
-      cancelAnimationFrame(animationId);
-    };
+    return () => cancelAnimationFrame(animationId);
   }, []);
 
-  // Split data for outer, middle, and inner circles
-  const numSkills = skillsData.length;
-  const outerCircleData = skillsData.slice(0, Math.ceil(numSkills / 3));
-  const middleCircleData = skillsData.slice(
-    Math.ceil(numSkills / 3),
-    Math.ceil((numSkills * 2) / 3)
-  );
-  const innerCircleData = skillsData.slice(Math.ceil((numSkills * 2) / 3));
-
+  const outerCircleData = skillsData.slice(0, Math.ceil(skillsData.length / 4));
+  const middleCircleData = skillsData.slice(Math.ceil(skillsData.length / 4), Math.ceil((skillsData.length * 2) / 4));
+  const innerCircleData = skillsData.slice(Math.ceil((skillsData.length * 2) / 4), Math.ceil((skillsData.length * 3) / 4));
+  const fourthCircleData = skillsData.slice(Math.ceil((skillsData.length * 3) / 4));
+  
   return (
     <section
       className="mb-28 scroll-mt-28 text-center sm:mb-40 max-w-3xl mx-auto"
@@ -153,143 +124,73 @@ const Skills = () => {
           minHeight: "30rem",
           minWidth: "30rem",
         }}
-        className="sm:block hidden my-20"
+        className="sm:block hidden my-28"
       >
-        {/* Outer circle */}
-        <ul
-          ref={outerContainerRef}
+        {/* Display hovered skill name */}
+        <div
+          className="absolute text-2xl font-bold"
           style={{
             position: "absolute",
-            top: "50%", // Center horizontally
-            left: "50%", // Center vertically
-            width: "30rem", // Larger outer circle
-            height: "30rem",
-            listStyleType: "none",
-            border: "0.5px solid var(--circle-background)",
-            borderRadius: "50%",
-            display: "grid",
-            placeItems: "center",
-            transform: `translate(-50%, -50%) rotate(${rotationAngle}deg)`, // Center and apply rotation
-            transition: "transform 0.9s linear", // Smooth transition
+            bottom: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
           }}
         >
-          {outerCircleData.map((skill, index) => (
-            <li
-              key={index}
-              ref={(el) => {
-                outerCircleRefs.current[index] = el;
-              }}
-              style={{
-                position: "absolute",
-                width: "3rem",
-                height: "3rem",
-                borderRadius: "50%",
-                display: "grid",
-                placeItems: "center",
-              }}
-            >
-              <Image
-                src={skill.image}
-                alt={`Icon for ${skill.name} skill`}
-                width={50}
-                height={50}
-                style={{ height: "auto" }} // Adjust height or width, and let the other scale naturally
-                layout="intrinsic"
-              />
-            </li>
-          ))}
-        </ul>
-
-        {/* Middle circle */}
-        <ul
-          ref={middleContainerRef}
-          style={{
-            position: "absolute",
-            top: "50%", // Center horizontally
-            left: "50%", // Center vertically
-            width: "20rem", // Medium circle
-            height: "20rem",
-            listStyleType: "none",
-            border: "0.5px solid var(--circle-background)",
-            borderRadius: "50%",
-            display: "grid",
-            placeItems: "center",
-            transform: `translate(-50%, -50%) rotate(${rotationAngle}deg)`, // Center and apply rotation
-            transition: "transform 0.9s linear", // Smooth transition
-          }}
-        >
-          {middleCircleData.map((skill, index) => (
-            <li
-              key={index}
-              ref={(el) => {
-                middleCircleRefs.current[index] = el;
-              }}
-              style={{
-                position: "absolute",
-                width: "2.5rem",
-                height: "2.5rem",
-                borderRadius: "50%",
-                display: "grid",
-                placeItems: "center",
-              }}
-            >
-              <Image
-                src={skill.image}
-                alt={`Icon for ${skill.name} skill`}
-                width={50}
-                height={50}
-                style={{ height: "auto" }} // Adjust height or width, and let the other scale naturally
-                layout="intrinsic"
-              />
-            </li>
-          ))}
-        </ul>
-
-        {/* Inner circle */}
-        <ul
-          ref={innerContainerRef}
-          style={{
-            position: "absolute",
-            top: "50%", // Center horizontally
-            left: "50%", // Center vertically
-            width: "10rem", // Smaller inner circle
-            height: "10rem",
-            listStyleType: "none",
-            border: "0.5px solid var(--circle-background)",
-            borderRadius: "50%",
-            display: "grid",
-            placeItems: "center",
-            transform: `translate(-50%, -50%) rotate(${rotationAngle}deg)`, // Center and apply rotation
-            transition: "transform 0.9s linear", // Smooth transition
-          }}
-        >
-          {innerCircleData.map((skill, index) => (
-            <li
-              key={index}
-              ref={(el) => {
-                innerCircleRefs.current[index] = el;
-              }}
-              style={{
-                position: "absolute",
-                width: "2rem",
-                height: "2rem",
-                // Use CSS variable for color
-                borderRadius: "50%",
-                display: "grid",
-                placeItems: "center",
-              }}
-            >
-              <Image
-                src={skill.image}
-                alt={`Icon for ${skill.name} skill`}
-                width={50}
-                height={50}
-                style={{ height: "auto" }} // Adjust height or width, and let the other scale naturally
-                layout="intrinsic"
-              />
-            </li>
-          ))}
-        </ul>
+          {hoveredSkill} {/* Fallback text */}
+        </div>
+        {/* Circle containers */}
+        {[
+          { ref: outerContainerRef, data: outerCircleData, size: "30rem", circleRefs: outerCircleRefs },
+          { ref: middleContainerRef, data: middleCircleData, size: "20rem", circleRefs: middleCircleRefs },
+          { ref: innerContainerRef, data: innerCircleData, size: "10rem", circleRefs: innerCircleRefs },
+          { ref: fourthContainerRef, data: fourthCircleData, size: "40rem", circleRefs: fourthCircleRefs },
+        ].map(({ ref, data, size, circleRefs }, index) => (
+          <ul
+            key={index}
+            ref={ref}
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              width: size,
+              height: size,
+              listStyleType: "none",
+              border: "0.5px solid var(--circle-background)",
+              borderRadius: "50%",
+              display: "grid",
+              placeItems: "center",
+              transform: `translate(-50%, -50%) rotate(${rotationAngle}deg)`,
+              transition: "transform 0.9s linear",
+            }}
+          >
+            {data.map((skill: Skill, i: number) => (
+              <li
+                key={i}
+                ref={(el) => {
+                  circleRefs.current[i] = el;
+                }}
+                // onMouseEnter={() => setHoveredSkill(skill.name)}
+                // onMouseLeave={() => setHoveredSkill(null)}
+                style={{
+                  position: "absolute",
+                  width: "3rem",
+                  height: "3rem",
+                  borderRadius: "50%",
+                  display: "grid",
+                  placeItems: "center",
+                }}
+              >
+                <Image
+                  src={skill.image}
+                  alt={`Icon for ${skill.name} skill`}
+                  width={50}
+                  height={50}
+                  style={{ height: "auto" }}
+                />
+              </li>
+            ))}
+          </ul>
+        ))}
       </div>
     </section>
   );

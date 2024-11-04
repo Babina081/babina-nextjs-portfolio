@@ -197,6 +197,7 @@ export const skillsData = [
   { name: "React", image: "/skill-images/react.png" },
   { name: "Next.js", image: "/skill-images/nextjs.png" },
   { name: "Tailwind", image: "/skill-images/tailwind.png" },
+  { name: "MUI", image: "/skill-images/mui.svg" },
   { name: "Sass", image: "/skill-images/sass.png" },
   { name: "Node.js", image: "/skill-images/nodejs.png" },
   { name: "Express", image: "/skill-images/express-js.png" },
@@ -205,12 +206,17 @@ export const skillsData = [
   { name: "Redux", image: "/skill-images/redux.png" },
   { name: "Postman", image: "/skill-images/postman.png" },
   { name: "Git", image: "/skill-images/git.png" },
+  { name: "GitHub", image: "/skill-images/github.png" },
+  { name: "GitLab", image: "/skill-images/gitlab.svg" },
   { name: "Jest", image: "/skill-images/jest.jpg" },
   { name: "ReactHook Form", image: "/skill-images/react-hook-form.svg" },
   { name: "Zod", image: "/skill-images/zod.png" },
+  { name: "NextAuth.js", image: "/skill-images/nextauth.png" },
   { name: "Tanstack", image: "/skill-images/tanstack.png" },
   { name: "Prisma", image: "/skill-images/prisma.png" },
   { name: "Vercel", image: "/skill-images/vercel.svg" },
+  { name: "Yarn", image: "/skill-images/yarn.png" },
+  { name: "Npm", image: "/skill-images/npm.png" },
 ] as const;
 
 export const academicData = [
