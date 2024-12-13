@@ -11,8 +11,9 @@ export function PHProvider({ children }: { children: React.ReactNode }) {
 
     posthog.init(posthogKey, {
       api_host: posthogHost,
-      person_profiles: "identified_only",
+      person_profiles: "always",
       capture_pageview: true,
+      autocapture: true,
     });
   }, []);
 
